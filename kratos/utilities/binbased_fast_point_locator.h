@@ -165,7 +165,7 @@ public:
      * @brief This function should find the element into which a given node is located
      * and return a pointer to the element and the vector containing the
      * shape functions that define the position within the element
-     * @param rCoordinates The vector containign the coordinates of the point to be searched
+     * @param rCoordinates The vector containing the coordinates of the point to be searched
      * @param rNShapeFunction The vector containing the shape function of the located point
      * @param pEntity The pointer to the element containing the located point
      * @param ItResultBegin The iterator of the search
@@ -215,7 +215,7 @@ public:
      * @brief This function should find the element into which a given node is located
      * and return a pointer to the element and the vector containing the
      * shape functions that define the position within the element
-     * @param rCoordinates The vector containign the coordinates of the point to be searched
+     * @param rCoordinates The vector containing the coordinates of the point to be searched
      * @param rNShapeFunction The vector containing the shape function of the located point
      * @param pEntity The pointer to the element containing the located point
      * @param ItResultBegin The iterator of the search
@@ -261,7 +261,7 @@ public:
 
     /**
      * @brief Simplified (less efficient) function to find the element into which a given node is located and return a pointer to the element and the vector containing the shape functions that define the position within the element
-     * @param rCoordinates The vector containign the coordinates of the point to be searched
+     * @param rCoordinates The vector containing the coordinates of the point to be searched
      * @param rNShapeFunction The vector containing the shape function of the located point
      * @param pEntity The pointer to the element containing the located point
      * @param MaxNumberOfResults The max number of results to be considered
