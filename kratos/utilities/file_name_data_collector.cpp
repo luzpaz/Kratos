@@ -99,7 +99,7 @@ FileNameDataCollector::FileNameDataCollector(
             << "Having two flags adjacent to each other is not allowed. Please "
                "separate \""
             << r_previous_pattern_flag.GetPatternFlagString() << "\" and \""
-            << r_pattern_flag.GetPatternFlagString() << "\" flags by a seperation character/string which is not a starting with a digit. [ PatternFileName = "
+            << r_pattern_flag.GetPatternFlagString() << "\" flags by a separation character/string which is not a starting with a digit. [ PatternFileName = "
             << rFileNamePattern << " ]\n";
 
         // check patterns starting with digits
@@ -145,10 +145,10 @@ bool FileNameDataCollector::RetrieveFileNameData(
 
     std::size_t current_position = 0;
     for (const auto& r_flag : mFileNamePatternFlags) {
-        // checks whether rFileNameWithoutPath matterns the constructor prescribed  file name pattern,
-        // if so fille it with relevant data.
+        // checks whether rFileNameWithoutPath matches the constructor prescribed file name pattern,
+        // if so fill it with relevant data.
         if (!r_flag.UpdateFileNameData(rFileNameData, current_position, rFileNameWithoutPath)) {
-            // filename data update unsuccessfull because given rFileNameWithoutPath doesn not match
+            // filename data update unsuccessful because given rFileNameWithoutPath doesn't match
             // constructor prescribed file name pattern.
             return false;
         }

@@ -84,7 +84,7 @@ public:
         const DataCommunicator& rComm
     );
 
-    /** This function colors communications so to allow syncronous mpi communications
+    /** This function colors communications so to allow synchronous mpi communications
      *  each processor receives an array of integers, corresponding to the colors of communication.
      *  -1 implies no communication happening on that epoque.
      *

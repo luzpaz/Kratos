@@ -34,7 +34,7 @@ public:
     /*
     * @brief Returns the projection of a point onto a Nurbs curve
     *        geometry using the Newton-Rapshon iterative method
-    * @param rProjectedPointLoaclCoordinates Intial guess for the Newton-Rapshon algorithm
+    * @param rProjectedPointLoaclCoordinates Initial guess for the Newton-Rapshon algorithm
     *        overwritten by the local coordinates of the projected point onto
     *        the Nurbs curve geometry
     * @param rPoint The point to be projected onto the Nurbs curve geometry
@@ -56,7 +56,7 @@ public:
         const int MaxIterations = 20,
         const double Accuracy = 1e-6)
     {
-        // Intialize variables
+        // Initialize variables
         double residual, delta_t;
 
         std::vector<array_1d<double, 3>> derivatives(3);
@@ -112,7 +112,7 @@ public:
     /*
     * @brief Returns the projection of a point onto a Nurbs surface
     *        geometry using the Newton-Rapshon iterative method
-    * @param rProjectedPointLocalCoordinates Intial guess for the Newton-Rapshon algorithm
+    * @param rProjectedPointLocalCoordinates Initial guess for the Newton-Rapshon algorithm
     *        overwritten by the local coordinates of the projected point onto
     *        the Nurbs surface geometry
     * @param rPoint The point to be projected onto the Nurbs surface geometry

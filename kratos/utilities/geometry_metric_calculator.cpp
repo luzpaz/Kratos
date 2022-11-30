@@ -100,7 +100,7 @@ void GeometryMetricCalculator<TDim,TNumNodes>::CalculateMetricTensor(
     MathUtils<double>::GaussSeidelEigenSystem(rMetricTensor, eigenvects, eigenvals);
 
     // Calculate the reference element size as the average of the ellipsis of inertia axes lengths
-    // Note that the lenght of each semiaxe is computed from the metric tensor eigenvalues
+    // Note that the length of each semiaxe is computed from the metric tensor eigenvalues
     // In here we also obtain the infimum and supremum values of the metric tensor
     rReferenceElementSize = 0.0;
     rMetricInfimum = std::numeric_limits<double>::max();

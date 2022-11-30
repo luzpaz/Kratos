@@ -35,8 +35,8 @@ namespace Kratos
 {
 
 /** This utility can be used to calculate the discontinuous shape function for tetrahedra element.
- *  The metodology consists in partitioning the tetrahedra in a set of sub-tetrahedra and
- *  cacluate the new shape functions using these partitions.
+ *  The methodology consists in partitioning the tetrahedra in a set of sub-tetrahedra and
+ *  calculate the new shape functions using these partitions.
  */
 class DiscontinuousShapeFunctionsUtilities
 {
@@ -54,7 +54,7 @@ public:
      *        so that it is  N(gauss_index, node_index)
      * @param rPartitionsSign A result vector of 6 holding the sign of the distance for the partition.
      *        The value -1 represents the negative distance sign, 1 represents positive distance and 0 stands for not used partition
-     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape funciton for each volume.
+     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape function for each volume.
      *        Each element of vector is a 1x3 matrix representing the gradient of enriched shape function. The use of
      *        matrix is for possible future improvement.
      * @param Nenriched is a Matrix that contains for every gauss point the values of the enriched shape functions at the position of the gauss point
@@ -144,7 +144,7 @@ public:
         array_1d<double, n_nodes> abs_distance = ZeroVector(n_nodes);
         //double sub_volumes_sum = 0.00;
 
-        //compute edge lenghts and max_lenght
+        //compute edge lengths and max_lenght
         double max_lenght = 0.0;
         for (int edge = 0; edge < n_edges; edge++)
         {
@@ -410,7 +410,7 @@ public:
                         }
 
                     }
-                    //else //do nothing. it simply can't add to a  node that is not in the same side, since we are creating discontinous shape functions
+                    //else //do nothing. it simply can't add to a  node that is not in the same side, since we are creating discontinuous shape functions
                 }
             }
 
@@ -651,7 +651,7 @@ public:
                             }
                         }
                     }
-                    // Else do nothing it simply can't add to a node that is not in the same side, since we are creating discontinous shape functions
+                    // Else do nothing it simply can't add to a node that is not in the same side, since we are creating discontinuous shape functions
                 }
 
                 rGPShapeFunctionValues(partition_number,0) = N(0);
@@ -908,7 +908,7 @@ public:
                                     rGradientsValue[partition_number](j,1)+=DN_DX_subdomain(k,1); //[i_partition], (shape function gradient,direction(x,y))
                                 }
                         }
-                        //else do nothing. it simply can't add to a node that is not in the same side, since we are creating discontinous shape functions
+                        //else do nothing. it simply can't add to a node that is not in the same side, since we are creating discontinuous shape functions
                     }
 
                     rGPShapeFunctionValues(partition_number,0)=N(0);

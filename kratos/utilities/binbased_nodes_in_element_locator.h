@@ -31,7 +31,7 @@
 namespace Kratos
 {
 ///This class is designed to allow the fast location of the nodes of a fixed mesh with respect to a moving mesh.
-///The utility relies on the creation of a static Bin that allows finding quikly the nodes of a fixed mesh that
+///The utility relies on the creation of a static Bin that allows finding quickly the nodes of a fixed mesh that
 ///are inside each of the elements of the moving one.
 ///After the creation of the "BinBasedNodesInElementLocator",
 ///the user should call the function "UpdateSearchDatabase" or"UpdateSearchDatabaseAssignedSize(hmin)"  to mount the bin
@@ -86,13 +86,13 @@ public:
         typename StaticBins::SizeType bucket_size = 20;
 
         typename StaticBins::Pointer paux = typename StaticBins::Pointer(new StaticBins(mlist_of_new_nodes.begin(),mlist_of_new_nodes.end(),bucket_size) );
-        paux.swap(mp_search_structure); //the class mp_search_structure remains in the memory, while the paux just constucted is destryed.
+        paux.swap(mp_search_structure); //the class mp_search_structure remains in the memory, while the paux just constructed is destroyed.
 
         KRATOS_CATCH("")
     }
 
     /// Function to construct or update the search database
-    /// The cell size is requested as input parameter. This action reduces consideribly the searching procedure.
+    /// The cell size is requested as input parameter. This action reduces considerably the searching procedure.
     /// One possibility is to give the dimension of the mesh.
     /**
     * @param CellSize The bin cell size
@@ -113,12 +113,12 @@ public:
         }
 
         typename StaticBins::Pointer paux = typename StaticBins::Pointer(new StaticBins(mlist_of_new_nodes.begin(),mlist_of_new_nodes.end(),CellSize) );
-        paux.swap(mp_search_structure); //the class mp_search_structure remains in the memory, while the paux just constucted is destryed.
+        paux.swap(mp_search_structure); //the class mp_search_structure remains in the memory, while the paux just constructed is destroyed.
 
         KRATOS_CATCH("")
     }
 
-    ///function to find all teh nodes of a fixed mesh contained in the elements of a moving mesh
+    ///function to find all the nodes of a fixed mesh contained in the elements of a moving mesh
     /**
     *	It is called each time a projection from a moving to a fixed mesh is performed using the function of @see binbased_projection.h
     * @param pelement The pointer to the element to be studied
@@ -293,7 +293,7 @@ private:
         double inv_area = 0.0;
         if (area == 0.0)
         {
-            //The interpolated node will not be inside an elemente with zero area
+            //The interpolated node will not be inside an element with zero area
             return false;
         }
         else
@@ -347,7 +347,7 @@ private:
         double inv_vol = 0.0;
         if (vol < 0.0000000000001)
         {
-            //The interpolated node will not be inside an elemente with zero area
+            //The interpolated node will not be inside an element with zero area
             return false;
         }
         else

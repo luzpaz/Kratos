@@ -93,14 +93,14 @@ public:
     /**
      * @brief This function tests the geometries
      * @param rModel A model containing a model part
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool RunTest(Model& rModel);
 
     /**
      * @brief This function tests the Tetrahedra3D4N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestTetrahedra3D4N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestTetrahedra3D4N(rModelPart, ss);}
 
@@ -108,7 +108,7 @@ public:
      * @brief This function tests the Tetrahedra3D4N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestTetrahedra3D4N(
         ModelPart& rModelPart,
@@ -118,7 +118,7 @@ public:
     /**
      * @brief This function tests the Tetrahedra3D10N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestTetrahedra3D10N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestTetrahedra3D10N(rModelPart, ss);}
 
@@ -126,7 +126,7 @@ public:
      * @brief This function tests the Tetrahedra3D10N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestTetrahedra3D10N(
         ModelPart& rModelPart,
@@ -136,7 +136,7 @@ public:
     /**
      * @brief This function tests the Triangle2D3N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestTriangle2D3N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestTriangle2D3N(rModelPart, ss);}
 
@@ -144,7 +144,7 @@ public:
      * @brief This function tests the Triangle2D3N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestTriangle2D3N(
         ModelPart& rModelPart,
@@ -154,7 +154,7 @@ public:
     /**
      * @brief This function tests the Triangle2D6N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestTriangle2D6N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestTriangle2D6N(rModelPart, ss);}
 
@@ -162,7 +162,7 @@ public:
      * @brief This function tests the Triangle2D6N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestTriangle2D6N(
         ModelPart& rModelPart,
@@ -172,7 +172,7 @@ public:
     /**
      * @brief This function tests the Quadrilateral2D4N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestQuadrilateral2D4N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestQuadrilateral2D4N(rModelPart, ss);}
 
@@ -180,7 +180,7 @@ public:
      * @brief This function tests the Quadrilateral2D4N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestQuadrilateral2D4N(
         ModelPart& rModelPart,
@@ -190,7 +190,7 @@ public:
     /**
      * @brief This function tests the Quadrilateral2D9N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestQuadrilateral2D9N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestQuadrilateral2D9N(rModelPart, ss);}
 
@@ -198,7 +198,7 @@ public:
      * @brief This function tests the Quadrilateral2D9N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestQuadrilateral2D9N(
         ModelPart& rModelPart,
@@ -208,7 +208,7 @@ public:
     /**
      * @brief This function tests the Quadrilateral2D4N (interface)
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestQuadrilateralInterface2D4N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestQuadrilateralInterface2D4N(rModelPart, ss);}
 
@@ -216,7 +216,7 @@ public:
      * @brief This function tests the Quadrilateral2D4N (interface)
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestQuadrilateralInterface2D4N(
         ModelPart& rModelPart,
@@ -226,7 +226,7 @@ public:
     /**
      * @brief This function tests the Hexahedra3D8N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestHexahedra3D8N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestHexahedra3D8N(rModelPart, ss);}
 
@@ -234,7 +234,7 @@ public:
      * @brief This function tests the Hexahedra3D8N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestHexahedra3D8N(
         ModelPart& rModelPart,
@@ -244,7 +244,7 @@ public:
     /**
      * @brief This function tests the Hexahedra3D20N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestHexahedra3D20N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestHexahedra3D20N(rModelPart, ss);}
 
@@ -252,7 +252,7 @@ public:
      * @brief This function tests the Hexahedra3D20N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestHexahedra3D20N(
         ModelPart& rModelPart,
@@ -262,7 +262,7 @@ public:
     /**
      * @brief This function tests the Hexahedra3D27N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestHexahedra3D27N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestHexahedra3D27N(rModelPart, ss);}
 
@@ -270,7 +270,7 @@ public:
      * @brief This function tests the Hexahedra3D27N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestHexahedra3D27N(
         ModelPart& rModelPart,
@@ -280,7 +280,7 @@ public:
     /**
      * @brief This function tests the Hexahedra3D8N (interface)
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestHexahedraInterface3D8N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestHexahedraInterface3D8N(rModelPart, ss);}
 
@@ -288,7 +288,7 @@ public:
      * @brief This function tests the Hexahedra3D8N (interface)
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestHexahedraInterface3D8N(
         ModelPart& rModelPart,
@@ -298,7 +298,7 @@ public:
     /**
      * @brief This function tests the Prism3D6N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestPrism3D6N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestPrism3D6N(rModelPart, ss);}
 
@@ -306,7 +306,7 @@ public:
      * @brief This function tests the Prism3D6N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestPrism3D6N(
         ModelPart& rModelPart,
@@ -316,7 +316,7 @@ public:
     /**
      * @brief This function tests the Prism3D15N
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestPrism3D15N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestPrism3D15N(rModelPart, ss);}
 
@@ -324,7 +324,7 @@ public:
      * @brief This function tests the Prism3D15N
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
    bool StreamTestPrism3D15N(
        ModelPart& rModelPart,
@@ -334,7 +334,7 @@ public:
     /**
      * @brief This function tests the Prism3D6N (interface)
      * @param rModelPart Model part containing nodes
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool TestPrismInterface3D6N(ModelPart& rModelPart) {std::stringstream ss; return StreamTestPrismInterface3D6N(rModelPart, ss);}
 
@@ -342,7 +342,7 @@ public:
      * @brief This function tests the Prism3D6N (interface)
      * @param rModelPart Model part containing nodes
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool StreamTestPrismInterface3D6N(
         ModelPart& rModelPart,
@@ -500,7 +500,7 @@ private:
      * @param rGeometry The geometry
      * @param rGlobalCoordinates The global coordinates
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool VerfiyShapeFunctionsValues(
         GeometryType& rGeometry,
@@ -513,7 +513,7 @@ private:
      * @param rGeometry The geometry
      * @param rGlobalCoordinates The global coordinates
      * @param rErrorMessage The error message
-     * @return true If teh test fails, true otherwise¡
+     * @return true If the test fails, true otherwise¡
      */
     bool VerifyShapeFunctionsSecondDerivativesValues(
         GeometryType& rGeometry,
@@ -522,7 +522,7 @@ private:
         );
 
     /**
-     * @brief Get the name of the intergration method
+     * @brief Get the name of the integration method
      * @param rGeometry The geometry
      * @param ThisMethod The integration method
      * @return The integration method name

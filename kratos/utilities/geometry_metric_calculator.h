@@ -84,7 +84,7 @@ public:
      * @brief Calculate the metric tensor of a given geometry
      * This function calculates the metric tensor and its data for a given geometry.
      * The metric tensor M is computed by solving the problem trans(e)*M*e = 1, that means find
-     * the coefficients of the matrix M such that all the geometry edges (e) have unit lenght.
+     * the coefficients of the matrix M such that all the geometry edges (e) have unit length.
      * @tparam TDim Geometry working dimension
      * @tparam TNumNodes Geometry number of nodes
      * @param rGeometry Reference to the geometry of interest
@@ -98,8 +98,8 @@ public:
      * @brief Calculate the metric tensor of a given geometry
      * This function calculates the metric tensor and its data for a given geometry.
      * The metric tensor M is computed by solving the problem trans(e)*M*e = 1, that means find
-     * the coefficients of the matrix M such that all the geometry edges (e) have unit lenght.
-     * The eigenvalues of the metric tensor are also computed in order to obtain the lenghts
+     * the coefficients of the matrix M such that all the geometry edges (e) have unit length.
+     * The eigenvalues of the metric tensor are also computed in order to obtain the lengths
      * of the Steiner inertia ellipsis semiaxes. This allows computing the reference element
      * size (as the average of the semiaxes lengths) and the infimum and supremum norms of M.
      * @tparam TDim Geometry working dimension
@@ -121,8 +121,8 @@ public:
      * @brief Calculate the metric tensor of a given geometry
      * This function calculates the metric tensor and its data for a given geometry.
      * The metric tensor M is computed by solving the problem trans(e)*M*e = 1, that means find
-     * the coefficients of the matrix M such that all the geometry edges (e) have unit lenght.
-     * The eigenvalues of the metric tensor are also computed in order to obtain the lenghts
+     * the coefficients of the matrix M such that all the geometry edges (e) have unit length.
+     * The eigenvalues of the metric tensor are also computed in order to obtain the lengths
      * of the Steiner inertia ellipsis semiaxes. This allows computing the reference element
      * size (as the average of the semiaxes lengths) and the infimum and supremum norms of M.
      * Note that this methods returns the dimensionless metric that is the metric tensor

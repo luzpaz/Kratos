@@ -34,8 +34,8 @@ namespace Kratos
 {
 
 /** @brief This utility can be used to calculate the enriched shape function for tetrahedra element.
- *  @details The metodology consists in partitioning the tetrahedra in a set of sub-tetrahedra and
- *  cacluate the enrichment information using these partitions.
+ *  @details The methodology consists in partitioning the tetrahedra in a set of sub-tetrahedra and
+ *  calculate the enrichment information using these partitions.
  */
 class DiscontinuousShapeFunctionsUtilities_2D
 {
@@ -46,7 +46,7 @@ public:
      * @details Basically, two shape functions are provided, 
      * -# One is the enrichment to capturate discontinuities in the gradients of the pressure 
      *       ("Improving Eulerian two-phase flow finite element approximation with discontinuous gradient (i.e pressure) shape functions" Coppola-Owen and Codina) 
-     * -# The second one is to capturate discontinuities in the varialbe(ie. pressure). it is a shape function that is zero on the nodes and has a constant discontinuity along the found interfase)
+     * -# The second one is to capturate discontinuities in the variable(ie. pressure). it is a shape function that is zero on the nodes and has a constant discontinuity along the found interfase)
      * 
      * @param rPoints A 3x3 matrix where row i has the coordinates of node i.
      * @param DN_DX The gradient of the shape functions Ni respect to the reference coordinates
@@ -54,14 +54,14 @@ public:
      *        it is used internally to mark the position of the zero level
      * @param rVolumes Result vector with size (3+1) (maximum number of partitions) holding the volume of each partition. 
      * 		  Partitions are given in the following order: first the one that is "alone". meaning that it is on the side of the interfase where there's only a triangle
-     * 		   and the other 2 are the ones in the other side. So the paritition signs will be allways -1,1,1 or 1,-1,-1
-     * 		  Note:volume 4 is not a partition itself, but is added to be used in the element. it would be the result of creating the 2 triangles of the cuadrilateral paritition with the opposite edge as the current configuration (joining node k_aux with node_4 instead of the current node_j-node5)
+     * 		   and the other 2 are the ones in the other side. So the partition signs will be always -1,1,1 or 1,-1,-1
+     * 		  Note:volume 4 is not a partition itself, but is added to be used in the element. it would be the result of creating the 2 triangles of the cuadrilateral partition with the opposite edge as the current configuration (joining node k_aux with node_4 instead of the current node_j-node5)
      * @param rShapeFunctionValues Result 3x3 matrix where each row represents a partition and holds the shape functions N1 to N3 ( the cut)
      *        of the original triangle evaluated in the gauss point (center) of the partition.
      *        so that it is  N(gauss_index, node_index)
      * @param rPartitionsSign A result vector of 3 holding the sign of the distance for the partition. Read rVolumes 5 lines above
      *        The value -1 represents the negative distance sign, 1 represents positive distance and 0 stands for not used partition
-     * @param rGradientsValue Restult vector of size 3 holding the gradient of the enriched shape funciton for each volume.
+     * @param rGradientsValue Restult vector of size 3 holding the gradient of the enriched shape function for each volume.
      *        Each element of vector is a 1x3 matrix representing the gradient of enriched shape function. The use of
      *        matrix is for possible future improvement.
      * @param Nenriched is a Matrix that contains for every gauss point the values of the enriched shape functions at the position of the gauss point
@@ -69,7 +69,7 @@ public:
      * @param face_gauss_N is the location of the (single) integration point of the interfase: its midpoint.
      * @param face_gauss_N_enrich is the value of the enrichment shape functions in the integration point
      * 		  actually it's value is always the same so no need to use it: the shape functions were defined to make it 1 in the first shape function,
-     * 		  And 1 and -1 the second shape function (it's discontinous, so it has these two values in the interfase)
+     * 		  And 1 and -1 the second shape function (it's discontinuous, so it has these two values in the interfase)
      * 		  @warning Therefore the discontinuity in the shape function is equal to 2.
      * @param type_of_cut The partition that is 'alone': the one that is on one side of the shape function
      * 		  the other two are the ones in the other side, meaning they have the same derivatives and , for example, densities.
@@ -286,7 +286,7 @@ public:
 							 }
  
 					 }
-					 //else //do nothing. it simply can't add to a  node that is not in the same side, since we are creating discontinous shape functions
+					 //else //do nothing. it simply can't add to a  node that is not in the same side, since we are creating discontinuous shape functions
 				 }
 				 
 				 rGPShapeFunctionValues(partition_number,0)=N(0);
@@ -462,7 +462,7 @@ public:
 		 
 		  //we will adimensionalize the new shape functions so that the value is one on the midpoint on the interfase:
 		  const double adim_Nenriched_i_aux = 1.0 /(face_gauss_N(i_aux)); //for partitions 2 and 3
-		  //also the other 2 shape fuctions must be resized so that the new enrichment is constant along the interfase:
+		  //also the other 2 shape functions must be resized so that the new enrichment is constant along the interfase:
 		  const double adim_Nenriched_j_aux = adim_Nenriched_i_aux * Ni_aux_node4 / Nj_aux_node4 ; //to have a constant value in the interfase at node 4: =N_j_aux_node4 / N_j_aux when adimensionalized
 		  const double adim_Nenriched_k_aux =  adim_Nenriched_i_aux * Ni_aux_node5 / Nk_aux_node5 ; //to have a constant value in the interfase at node 5: = N_k_aux_node4 / N_k_aux when adimensionalized
 		  
@@ -473,7 +473,7 @@ public:
 		 
 		  //value of the shape functions in the interfase
 		  face_gauss_Nenriched(i_aux)= 1.0;
-		  face_gauss_Nenriched(j_aux)= 0.0; //actualy it's not defined, it's a discontinous function
+		  face_gauss_Nenriched(j_aux)= 0.0; //actually it's not defined, it's a discontinuous function
 		 
 		 //first partition
 		 //now we must calculate the position of the new nodes to get the area.
@@ -588,7 +588,7 @@ public:
 		 KRATOS_WATCH( rGradientsValue[1](0,1))
 		 */
 		  
-		 //NOT A PARTITION, just the volume of a different conectivity:
+		 //NOT A PARTITION, just the volume of a different connectivity:
 		 //just replacing the third node. Useful only to recover information, for example N(i,j,k) of node5
 		 coord_subdomain(2,0) = rPoints(i_aux,0)*Ni_aux_node4+rPoints(j_aux,0)*Nj_aux_node4;
 		 coord_subdomain(2,1) = rPoints(i_aux,1)*Ni_aux_node4+rPoints(j_aux,1)*Nj_aux_node4;

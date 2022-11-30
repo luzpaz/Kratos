@@ -584,7 +584,7 @@ protected:
 
     std::unordered_map<IndexType, VariableDatabase> mData; // The database storing the values
 
-    Vector mCommonColumn; /// This vector stores the common column (usually TIME), so it needs to be initialized at the begining
+    Vector mCommonColumn; /// This vector stores the common column (usually TIME), so it needs to be initialized at the beginning
 
     ///@}
 

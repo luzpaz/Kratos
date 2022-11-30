@@ -49,7 +49,7 @@ namespace Kratos
 /**
  * @class VariableUtils
  * @ingroup KratosCore
- * @brief This class implements a set of auxiliar, already parallelized, methods to
+ * @brief This class implements a set of auxiliary, already parallelized, methods to
  * perform some common tasks related with the variable values and fixity.
  * @details The methods are exported to python in order to add this improvements to the python interface
  * @author Riccardo Rossi
@@ -1146,7 +1146,7 @@ public:
      * one of the values in the data vector is set to its correspondent node. Besides,
      * the values must be sorted as the nodes are (value i corresponds to node i).
      * @param rVar reference to the variable to be fixed or freed
-     * @param rData rData vector. Note that its lenght must equal the number of nodes
+     * @param rData rData vector. Note that its length must equal the number of nodes
      * @param rNodes reference to the nodes set to be set
      */
     template< class TVarType >
@@ -1340,7 +1340,7 @@ public:
     {
         KRATOS_TRY
 
-        // First we do a chek
+        // First we do a check
         if(rModelPart.NumberOfNodes() != 0)
             KRATOS_ERROR_IF_NOT(rModelPart.NodesBegin()->SolutionStepsDataHas(rVar)) << "ERROR:: Variable : " << rVar << "not included in the Solution step data ";
 
@@ -1369,8 +1369,8 @@ public:
         KRATOS_TRY
 
         if(rModelPart.NumberOfNodes() != 0) {
-            KRATOS_ERROR_IF_NOT(rModelPart.NodesBegin()->SolutionStepsDataHas(rVar)) << "ERROR:: DoF Variable : " << rVar << "not included in the Soluttion step data ";
-            KRATOS_ERROR_IF_NOT(rModelPart.NodesBegin()->SolutionStepsDataHas(rReactionVar)) << "ERROR:: Reaction Variable : " << rReactionVar << "not included in the Soluttion step data ";
+            KRATOS_ERROR_IF_NOT(rModelPart.NodesBegin()->SolutionStepsDataHas(rVar)) << "ERROR:: DoF Variable : " << rVar << "not included in the Solution step data ";
+            KRATOS_ERROR_IF_NOT(rModelPart.NodesBegin()->SolutionStepsDataHas(rReactionVar)) << "ERROR:: Reaction Variable : " << rReactionVar << "not included in the Solution step data ";
         }
 
         // If in debug we do a check for all nodes
@@ -1641,7 +1641,7 @@ public:
 
 
     ///@}
-    ///@name Acces
+    ///@name Access
     ///@{
 
 
@@ -1675,7 +1675,7 @@ private:
     ///@{
 
     /**
-     * @brief This is auxiliar method to check the keys
+     * @brief This is auxiliary method to check the keys
      * @return True if all the keys are OK
      */
     template< class TVarType >
@@ -1744,7 +1744,7 @@ private:
     }
 
     ///@}
-    ///@name Private  Acces
+    ///@name Private  Access
     ///@{
 
 

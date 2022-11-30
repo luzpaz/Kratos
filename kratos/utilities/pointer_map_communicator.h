@@ -373,7 +373,7 @@ public:
                     //      communication need to be done only once -> Pro
                     //
                     // I think the 2nd options outweighs the first one, so I implemented the second one. Suggestions are
-                    // greately appreciated.
+                    // greatly appreciated.
 
                     const auto& received_gp_map = mrDataCommunicator.SendRecv(non_local_map[color], color, color);
 

@@ -60,7 +60,7 @@ namespace Kratos
  * @class BinBasedFastPointLocator
  * @ingroup KratosCore
  * @brief This class is designed to allow the fast location of MANY points on the top of a 3D mesh.
- * @details The utility relies on the creation of a Bin of objects that allows finding quikly a reduced number of element candidates for the location of a point.
+ * @details The utility relies on the creation of a Bin of objects that allows finding quickly a reduced number of element candidates for the location of a point.
  * The basic idea is to allow finding the element in which a given spatial position sits
  * The user should call the function "UpdateSearchDatabase" to mount the bin and subsequently locate the points as needed
  * @author  Riccardo Rossi <rrossi@cimne.upc.edu>
@@ -164,7 +164,7 @@ public:
     /**
      * @brief This function should find the element into which a given node is located
      * and return a pointer to the element and the vector containing the
-     * shape functions that define the postion within the element
+     * shape functions that define the position within the element
      * @param rCoordinates The vector containign the coordinates of the point to be searched
      * @param rNShapeFunction The vector containing the shape function of the located point
      * @param pEntity The pointer to the element containing the located point
@@ -214,7 +214,7 @@ public:
     /**
      * @brief This function should find the element into which a given node is located
      * and return a pointer to the element and the vector containing the
-     * shape functions that define the postion within the element
+     * shape functions that define the position within the element
      * @param rCoordinates The vector containign the coordinates of the point to be searched
      * @param rNShapeFunction The vector containing the shape function of the located point
      * @param pEntity The pointer to the element containing the located point
@@ -260,7 +260,7 @@ public:
     }
 
     /**
-     * @brief Simplified (less efficient) function to find the element into which a given node is located and return a pointer to the element and the vector containing the shape functions that define the postion within the element
+     * @brief Simplified (less efficient) function to find the element into which a given node is located and return a pointer to the element and the vector containing the shape functions that define the position within the element
      * @param rCoordinates The vector containign the coordinates of the point to be searched
      * @param rNShapeFunction The vector containing the shape function of the located point
      * @param pEntity The pointer to the element containing the located point

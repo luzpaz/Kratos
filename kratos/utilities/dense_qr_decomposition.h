@@ -83,7 +83,7 @@ public:
 
     /**
      * @brief Compute the QR
-     * Computes the QR Decomposition (QR) of the given imput matrix
+     * Computes the QR Decomposition (QR) of the given input matrix
      * @param rInputMatrix Matrix to compute the QR decomposition
      */
     virtual void Compute(MatrixType& rInputMatrix) = 0;

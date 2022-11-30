@@ -1126,7 +1126,7 @@ namespace
             auto it_found = sur_bd_nodes_map.find(r_bd_node.Id());
             if (it_found == sur_bd_nodes_map.end() && r_bd_node.Is(BOUNDARY)) {
 
-                // Set an auxilary map to calculate the current node nodal gradient contributions
+                // Set an auxiliary map to calculate the current node nodal gradient contributions
                 std::map<std::size_t, Vector> neigh_dn_dx_map;
 
                 // Calculate the nodal gradient coefficients in the ACTIVE elements neighbouring current node

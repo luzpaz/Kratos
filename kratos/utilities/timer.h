@@ -153,13 +153,13 @@ public:
     ///@{
 
     /**
-     * @brief This method starts the timer meassures
+     * @brief This method starts the timer measures
      * @param rIntervalName The internal name that will store the timing data
      */
     static void Start(std::string const& rIntervalName);
 
     /**
-     * @brief This method stops the timer meassures
+     * @brief This method stops the timer measures
      * @param rIntervalName The internal name that will store the timing data
      */
     static void Stop(std::string const& rIntervalName);
@@ -231,10 +231,10 @@ public:
 
     /**
      * @brief This method prints the internal information in a given stream
-     * @param rOStream The strem considered
+     * @param rOStream The stream considered
      * @param rIntervalName The internal name that will store the timing data
      * @param StartTime The starting time
-     * @param StopTime The stoping time
+     * @param StopTime The stopping time
      */
     static void PrintIntervalInformation(
         std::ostream& rOStream,
@@ -247,7 +247,7 @@ public:
      * @brief This method prints the internal information
      * @param rIntervalName The internal name that will store the timing data
      * @param StartTime The starting time
-     * @param StopTime The stoping time
+     * @param StopTime The stopping time
      */
     static void PrintIntervalInformation(
         std::string const& rIntervalName,
@@ -262,7 +262,7 @@ public:
 
     /**
      * @brief This method prints the timing information in a giving stream
-     * @param rOStream The strem considered
+     * @param rOStream The stream considered
      */
     static void PrintTimingInformation(std::ostream& rOStream);
 

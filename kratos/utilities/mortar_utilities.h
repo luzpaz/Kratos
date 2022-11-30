@@ -60,9 +60,9 @@ struct MortarUtilitiesSettings
 /**
  * @namespace MortarUtilities
  * @ingroup KratosCore
- * @brief This is a class that provides auxiliar utilities for the mortar integration
- * @details This is a class that provides auxiliar utilities for the mortar integration. Many methods
- * in the following class are templatizaded and with explicit instantations delclared.
+ * @brief This is a class that provides auxiliary utilities for the mortar integration
+ * @details This is a class that provides auxiliary utilities for the mortar integration. Many methods
+ * in the following class are templatizaded and with explicit instantiations delclared.
  * @note Check the documentation for more details
  * @author Vicente Mataix Ferrandiz
  * Contact: vmataix@cimne.upc.edu
@@ -512,24 +512,24 @@ namespace MortarUtilities
         );
 
     /**
-     * @brief This method resets the auxiliar value
+     * @brief This method resets the auxiliary value
      * @param rThisModelPart The model part to update
      */
     template< class TVarType>
     void KRATOS_API(KRATOS_CORE) ResetAuxiliarValue(ModelPart& rThisModelPart);
 
     /**
-     * @brief This method returns the auxiliar variable
-     * @return The auxiliar variable
+     * @brief This method returns the auxiliary variable
+     * @return The auxiliary variable
      */
     template< class TVarType>
     const std::string KRATOS_API(KRATOS_CORE) GetAuxiliarVariable();
 
     /**
-     * @brief This method returns the auxiliar variable
+     * @brief This method returns the auxiliary variable
      * @param rThisNode Reference to the node of interest
      * @param iSize The Index of the component
-     * @return The value of the auxiliar variable
+     * @return The value of the auxiliary variable
      */
     template< class TVarType>
     double KRATOS_API(KRATOS_CORE) GetAuxiliarValue(

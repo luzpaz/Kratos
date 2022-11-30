@@ -130,7 +130,7 @@ public:
 
     /// Timing routine.
     /**
-     Determine the current time by calling an appropiate
+     Determine the current time by calling an appropriate
      (scalar or parallel) timer class.
      @return Current time
      */

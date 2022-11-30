@@ -496,7 +496,7 @@ public:
     }
 
     /*@} */
-    /**@name Acces */
+    /**@name Access */
     /*@{ */
 
 
@@ -567,7 +567,7 @@ private:
 
 
     /*@} */
-    /**@name Private  Acces */
+    /**@name Private  Access */
     /*@{ */
 
 

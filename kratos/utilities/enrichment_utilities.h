@@ -36,8 +36,8 @@ namespace Kratos
 {
 
 /** This utility can be used to calculate the enriched shape function for tetrahedra element.
- *  The metodology consists in partitioning the tetrahedra in a set of sub-tetrahedra and
- *  cacluate the enrichment information using these partitions.
+ *  The methodology consists in partitioning the tetrahedra in a set of sub-tetrahedra and
+ *  calculate the enrichment information using these partitions.
  */
 class EnrichmentUtilities
 {
@@ -55,7 +55,7 @@ public:
      *        so that it is  N(gauss_index, node_index)
      * @param rPartitionsSign A result vector of 6 holding the sign of the distance for the partition.
      *        The value -1 represents the negative distance sign, 1 represents positive distance and 0 stands for not used partition
-     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape funciton for each volume.
+     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape function for each volume.
      *        Each element of vector is a 1x3 matrix representing the gradient of enriched shape function. The use of
      *        matrix is for possible future improvement.
      * @param Nenriched is a Matrix that contains for every gauss point the values of the enriched shape functions at the position of the gauss point
@@ -144,7 +144,7 @@ public:
         array_1d<double, n_nodes> abs_distance = ZeroVector(n_nodes);
         //double sub_volumes_sum = 0.00;
 
-        //compute edge lenghts and max_lenght
+        //compute edge lengths and max_lenght
         double max_lenght = 0.0;
         for (int edge = 0; edge < n_edges; edge++)
         {
@@ -347,7 +347,7 @@ public:
                 double sub_volume = ComputeSubTetraVolumeAndCenter(aux_coordinates, center_position, i0, i1, i2, i3);
 
 
-                //here we add to the areas of the cut adges
+                //here we add to the areas of the cut edges
                 local_subtet_indices[0] = t[i*4];
                 local_subtet_indices[1] = t[i*4+1];
                 local_subtet_indices[2] = t[i*4+2];
@@ -486,9 +486,9 @@ public:
      *        so that it is  N(gauss_index, node_index)
      * @param rPartitionsSign A result vector of 6 holding the sign of the distance for the partition.
      *        The value -1 represents the negative distance sign, 1 represents positive distance and 0 stands for not used partition
-     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape funcitons for each volume.
+     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape functions for each volume.
      *        Each element of vector is a 2x3 matrix representing the gradients of enriched shape functions. The row indicates enrichemnt function
-     *        and the colum the direction of the gradient
+     *        and the column the direction of the gradient
      * @param Nenriched is a Matrix of size 6x2 that contains for every gauss point the values of the enriched shape functions at the position of the gauss point
      *        so that Nenriched(1,0) contains the value of the enriched shape function "0" at the gauss point "1"
      * @return number of partitions created which can be from 1 to 6.
@@ -587,7 +587,7 @@ public:
         array_1d<double, n_nodes> abs_distance = ZeroVector(n_nodes);
         //double sub_volumes_sum = 0.00;
 
-        //compute edge lenghts and max_lenght
+        //compute edge lengths and max_lenght
         double max_lenght = 0.0;
         for (int edge = 0; edge < n_edges; edge++)
         {
@@ -925,7 +925,7 @@ public:
         BoundedMatrix<double, 3, 2 > coord_subdomain; //used to pass arguments when we must calculate areas, shape functions, etc
         BoundedMatrix<double,3,2> DN_DX_subdomain; //used to retrieve derivatives
 
-        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when builing the discontinuity
+        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when building the discontinuity
         double Area;//area of the complete element
         rGPShapeFunctionValues(0,0)=one_third;
         rGPShapeFunctionValues(0,1)=one_third;
@@ -1238,7 +1238,7 @@ public:
         BoundedMatrix<double, 3, 2 > coord_subdomain; //used to pass arguments when we must calculate areas, shape functions, etc
         BoundedMatrix<double,3,2> DN_DX_subdomain; //used to retrieve derivatives
 
-        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when builing the discontinuity
+        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when building the discontinuity
         double Area;//area of the complete element
         rGPShapeFunctionValues(0,0)=one_third;
         rGPShapeFunctionValues(0,1)=one_third;
@@ -1587,7 +1587,7 @@ public:
                         number_of_real_nodes++;
                 }
 
-                if (number_of_real_nodes==2) //the jump enrichment has to be constructed from the auxiliar node.
+                if (number_of_real_nodes==2) //the jump enrichment has to be constructed from the auxiliary node.
                 {
                     for (int index_shape_function = 0; index_shape_function < 2; index_shape_function++) //enrichment shape function
                     {
@@ -1651,7 +1651,7 @@ public:
         BoundedMatrix<double, 3, 2 > coord_subdomain; //used to pass arguments when we must calculate areas, shape functions, etc
         BoundedMatrix<double,3,2> DN_DX_subdomain; //used to retrieve derivatives
 
-        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when builing the discontinuity
+        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when building the discontinuity
         double Area;//area of the complete element
         rGPShapeFunctionValues(0,0)=one_third;
         rGPShapeFunctionValues(0,1)=one_third;
@@ -2010,7 +2010,7 @@ public:
 
         BoundedMatrix<double,(2+1), 2 > rRotatedPoints;
 
-        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when builing the discontinuity
+        double most_common_sign=0; //the side of the cut in which two nodes are found (same sign) will be the ones that remains unchanged when building the discontinuity
         double Area;//area of the complete element
         rGPShapeFunctionValues(0,0)=one_third;
         rGPShapeFunctionValues(0,1)=one_third;

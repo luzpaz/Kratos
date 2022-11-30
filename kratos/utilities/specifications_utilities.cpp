@@ -71,7 +71,7 @@ void SpecificationsUtilities::AddMissingVariables(ModelPart& rModelPart)
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -94,7 +94,7 @@ void SpecificationsUtilities::AddMissingVariables(ModelPart& rModelPart)
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -172,7 +172,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<double>& r_variable = KratosComponents<Variable<double>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);
                 }
@@ -180,7 +180,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<bool>& r_variable = KratosComponents<Variable<bool>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);;
                 }
@@ -188,7 +188,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<int>& r_variable = KratosComponents<Variable<int>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);;
                 }
@@ -196,7 +196,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<array_1d<double, 3>>& r_variable = KratosComponents<Variable<array_1d<double, 3>>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);;
                 }
@@ -204,7 +204,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<array_1d<double, 6>>& r_variable = KratosComponents<Variable<array_1d<double, 6>>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);;
                 }
@@ -212,7 +212,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<Vector>& r_variable = KratosComponents<Variable<Vector>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);;
                 }
@@ -220,7 +220,7 @@ void SpecificationsUtilities::AddMissingVariablesFromSpecifications(
                 const Variable<Matrix>& r_variable = KratosComponents<Variable<Matrix>>().Get(r_variable_name);
                 has_variable = rModelPart.HasNodalSolutionStepVariable(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_variable) {
                     r_variable_list.Add(r_variable);;
                 }
@@ -253,7 +253,7 @@ void SpecificationsUtilities::AddMissingDofs(ModelPart& rModelPart)
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -276,7 +276,7 @@ void SpecificationsUtilities::AddMissingDofs(ModelPart& rModelPart)
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -357,7 +357,7 @@ void SpecificationsUtilities::AddMissingDofsFromSpecifications(
                 const Variable<double>& r_variable = KratosComponents<Variable<double>>().Get(r_variable_name);
                 has_dof = it_node_begin->HasDofFor(r_variable);
 
-                // If variable is missign is added to the model part
+                // If variable is missing is added to the model part
                 if (!has_dof) {
                     VariableUtils().AddDof(r_variable, rModelPart);
                 }
@@ -417,7 +417,7 @@ void SpecificationsUtilities::DetermineFlagsUsed(const ModelPart& rModelPart)
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -450,7 +450,7 @@ void SpecificationsUtilities::DetermineFlagsUsed(const ModelPart& rModelPart)
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -496,13 +496,13 @@ std::vector<std::string> SpecificationsUtilities::DetermineTimeIntegration(const
     std::unordered_map<std::string, std::size_t> time_integrations_map;
     std::vector<std::string> time_integrations;
 
-    // Auxiliar classes
+    // Auxiliary classes
     std::size_t counter = 0;
 
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -541,7 +541,7 @@ std::vector<std::string> SpecificationsUtilities::DetermineTimeIntegration(const
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -608,7 +608,7 @@ std::string SpecificationsUtilities::DetermineFramework(const ModelPart& rModelP
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -647,7 +647,7 @@ std::string SpecificationsUtilities::DetermineFramework(const ModelPart& rModelP
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -703,7 +703,7 @@ bool SpecificationsUtilities::DetermineSymmetricLHS(const ModelPart& rModelPart)
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -750,7 +750,7 @@ bool SpecificationsUtilities::DetermineSymmetricLHS(const ModelPart& rModelPart)
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -814,7 +814,7 @@ bool SpecificationsUtilities::DeterminePositiveDefiniteLHS(const ModelPart& rMod
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -861,7 +861,7 @@ bool SpecificationsUtilities::DeterminePositiveDefiniteLHS(const ModelPart& rMod
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -925,7 +925,7 @@ bool SpecificationsUtilities::DetermineIfCompatibleGeometries(const ModelPart& r
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -991,7 +991,7 @@ bool SpecificationsUtilities::DetermineIfCompatibleGeometries(const ModelPart& r
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condition has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -1074,7 +1074,7 @@ bool SpecificationsUtilities::DetermineIfRequiresTimeIntegration(const ModelPart
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -1121,7 +1121,7 @@ bool SpecificationsUtilities::DetermineIfRequiresTimeIntegration(const ModelPart
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -1182,7 +1182,7 @@ bool SpecificationsUtilities::CheckCompatibleConstitutiveLaws(const ModelPart& r
 
     bool compatible_cl = true;
 
-    // Auxiliar things
+    // Auxiliary things
     std::vector<ConstitutiveLaw::Pointer> cl_vector;
     const ProcessInfo& r_process_info = rModelPart.GetProcessInfo();
     ConstitutiveLaw::Features features;
@@ -1190,7 +1190,7 @@ bool SpecificationsUtilities::CheckCompatibleConstitutiveLaws(const ModelPart& r
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -1304,7 +1304,7 @@ int SpecificationsUtilities::CheckGeometricalPolynomialDegree(const ModelPart& r
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -1341,7 +1341,7 @@ int SpecificationsUtilities::CheckGeometricalPolynomialDegree(const ModelPart& r
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;
@@ -1398,7 +1398,7 @@ Parameters SpecificationsUtilities::GetDocumention(const ModelPart& rModelPart)
     // Define specifications
     Parameters specifications;
 
-    // We are going to procede like the following, we are going to iterate over all the elements and compare with the components, we will save the type and we will compare until we get that the type of element has changed
+    // We'll proceed as follows: iterate over all the elements and compare with the components, then save the type and compare until we get that the type of element has changed
     const auto& r_elements_array = rModelPart.Elements();
     if (r_elements_array.size() > 0) {
         std::string element_name;
@@ -1425,7 +1425,7 @@ Parameters SpecificationsUtilities::GetDocumention(const ModelPart& rModelPart)
         }
     }
 
-    // We are going to procede like the following, we are going to iterate over all the conditions and compare with the components, we will save the type and we will compare until we get that the type of condent has changed
+    // We'll proceed as follows: iterate over all the conditions and compare with the components, then save the type and compare until we get that the type of condition has changed
     const auto& r_conditions_array = rModelPart.Conditions();
     if (r_conditions_array.size() > 0) {
         std::string condition_name;

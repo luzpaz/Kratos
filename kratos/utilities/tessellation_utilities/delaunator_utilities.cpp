@@ -110,7 +110,7 @@ void CreateTriangleMeshFromNodes(ModelPart& rModelPart)
     const std::size_t number_of_nodes = r_nodes_array.size();
     std::vector<double> coordinates(2*number_of_nodes, 0.0);
 
-    // NOTE: 2D asssumed
+    // NOTE: 2D assumed
     for(std::size_t i=0; i<number_of_nodes; ++i) {
         auto it_node = it_node_begin + i;
 
@@ -203,7 +203,7 @@ std::vector<std::size_t> ComputeTrianglesConnectivity(const std::vector<Point>& 
     const std::size_t number_of_nodes = rPoints.size();
     std::vector<double> coordinates(2*number_of_nodes, 0.0);
 
-    // NOTE: 2D asssumed
+    // NOTE: 2D assumed
     // Filling coordinates buffer
     for(std::size_t i=0; i<number_of_nodes; ++i) {
         const auto& r_point = rPoints[i];
@@ -240,7 +240,7 @@ std::pair<std::vector<std::size_t>, std::vector<double>> ComputeTrianglesConnect
         in_mid.pointlist[i] = rCoordinates[i];
     }
 
-    // Initilize the segment list (note that default zero markers are assumed)
+    // Initialize the segment list (note that default zero markers are assumed)
     in_mid.numberofsegments = rSegments.size();
     in_mid.segmentlist = (int*) malloc(in_mid.numberofsegments * 2 * sizeof(int));
     in_mid.segmentmarkerlist = (int*) malloc(in_mid.numberofsegments * sizeof(int));

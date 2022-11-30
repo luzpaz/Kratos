@@ -149,7 +149,7 @@ public:
     /**
      * @brief This is the default constructor
      * @param IntegrationOrder The integration order to consider
-     * @param DistanceThreshold The maximum distance to be considered (if too far the integration will be skiped)
+     * @param DistanceThreshold The maximum distance to be considered (if too far the integration will be skipped)
      */
     ExactMortarIntegrationUtility(
         const SizeType IntegrationOrder = 0,
@@ -722,7 +722,7 @@ private:
     double mDistanceThreshold;               /// The distance where we directly  consider out of integration limits
     SizeType mEchoLevel;                     /// The echo level considered
     double mZeroToleranceFactor;             /// The zero tolerance factor considered
-    IntegrationMethod mAuxIntegrationMethod; /// The auxiliar list of Gauss Points taken from the geometry
+    IntegrationMethod mAuxIntegrationMethod; /// The auxiliary list of Gauss Points taken from the geometry
     bool mConsiderDelaunator;                /// If consider the DelaunatorUtilities in 3D in order to construct the triangles
 
     ///@}

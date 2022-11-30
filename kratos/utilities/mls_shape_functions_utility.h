@@ -63,7 +63,7 @@ public:
 
     /**
      * @brief Evaluates the linear polynomial basis
-     * This method evaluates the 2D linear polynommial basis in one point
+     * This method evaluates the 2D linear polynomial basis in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 2D linear polynomial basis values
      */
@@ -73,7 +73,7 @@ public:
 
     /**
      * @brief Evaluates the linear polynomial basis
-     * This method evaluates the 3D linear polynommial basis in one point
+     * This method evaluates the 3D linear polynomial basis in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 3D linear polynomial basis values
      */
@@ -83,7 +83,7 @@ public:
 
     /**
      * @brief Evaluates the quadratic polynomial basis
-     * This method evaluates the 2D quadratic polynommial basis in one point
+     * This method evaluates the 2D quadratic polynomial basis in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 2D linear polynomial basis values
      */
@@ -93,7 +93,7 @@ public:
 
     /**
      * @brief Evaluates the quadratic polynomial basis
-     * This method evaluates the 3D quadratic polynommial basis in one point
+     * This method evaluates the 3D quadratic polynomial basis in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 3D quadratic polynomial basis values
      */
@@ -103,7 +103,7 @@ public:
 
     /**
      * @brief Evaluates the linear polynomial basis derivatives
-     * This method evaluates the 2D linear polynommial basis derivatives in one point
+     * This method evaluates the 2D linear polynomial basis derivatives in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 2D linear polynomial basis derivatives values
      */
@@ -113,7 +113,7 @@ public:
 
     /**
      * @brief Evaluates the linear polynomial basis derivatives
-     * This method evaluates the 3D linear polynommial basis derivatives in one point
+     * This method evaluates the 3D linear polynomial basis derivatives in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 3D linear polynomial basis derivatives values
      */
@@ -123,7 +123,7 @@ public:
 
     /**
      * @brief Evaluates the quadratic polynomial basis derivatives
-     * This method evaluates the 2D quadratic polynommial basis derivatives in one point
+     * This method evaluates the 2D quadratic polynomial basis derivatives in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 2D quadratic polynomial basis derivatives values
      */
@@ -133,7 +133,7 @@ public:
 
     /**
      * @brief Evaluates the quadratic polynomial basis derivatives
-     * This method evaluates the 3D quadratic polynommial basis derivatives in one point
+     * This method evaluates the 3D quadratic polynomial basis derivatives in one point
      * @param rX Coordinates where the basis is evaluated
      * @param rBasis 3D quadratic polynomial basis derivatives values
      */

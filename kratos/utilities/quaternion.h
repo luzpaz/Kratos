@@ -245,7 +245,7 @@ namespace Kratos
 
 		/**
 		Constructs the Euler Angles from this Quaternion.
-		Euler Angles expresed in Z(-X)Z sequence as in GiD
+		Euler Angles expressed in Z(-X)Z sequence as in GiD
 		@param EA the output rotation matrix
 		*/
 		inline void ToEulerAngles(array_1d<double, 3>& EA)const
@@ -542,7 +542,7 @@ namespace Kratos
 
 		/**
 		Returns a Quaternion from Euler Angles.
-		Euler Angles expresed in Z(-X)Z sequence as in GiD
+		Euler Angles expressed in Z(-X)Z sequence as in GiD
 		@param EA the source rotation Euler Angles
 		@return a Quaternion from a Euler Angles
 		*/

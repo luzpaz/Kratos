@@ -105,7 +105,7 @@ public:
     }
     
     /**
-     * It adds a value to the ouput of the current row 
+     * It adds a value to the output of the current row 
      */
     
     template<class TClass>

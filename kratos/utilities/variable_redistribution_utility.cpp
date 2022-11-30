@@ -509,7 +509,7 @@ void VariableRedistributionUtility::ComputeNodalSizes(
         }
     });
 
-    // Assembe NODAL_MAUX values among processes
+    // Assemble NODAL_MAUX values among processes
     rModelPart.GetCommunicator().AssembleNonHistoricalData(NODAL_MAUX);
 }
 

@@ -92,7 +92,7 @@ public:
     virtual ~CuttingUtility() {}
 
 
-    ///This function Creates cutting planes by creating nodes and conditions (to define the conectivities) in a different model part.
+    ///This function Creates cutting planes by creating nodes and conditions (to define the connectivities) in a different model part.
     /** It is used to find the smallest edge that will be used later as a reference to identify whether a node is part of the plane or is simple close
     	(and therefore a new point will be created by interpolation)
      * @param mr_model_part . model part to find the smallest edge
@@ -131,7 +131,7 @@ public:
     ///************************************************************************************************
     ///************************************************************************************************
 
-    ///This function Creates cutting planes by creating nodes and conditions (to define the conectivities) in a different model part. (new_model_part)
+    ///This function Creates cutting planes by creating nodes and conditions (to define the connectivities) in a different model part. (new_model_part)
     /** each time it is called a new cutting plane is created and therefore new nodes and conditions are added to the new model part
         WARNING: the cutting plane MUST cut the domain in at least one triangle, otherwise a segmentiation fault might appear
      * @param mr_model_part . original model part
@@ -187,7 +187,7 @@ public:
 
 
     /// ADDSKINCONDITIONS: THIS FUNCTION ADDS TO THE NEW MODEL PART THE DATA OF THE CONDITIONS BELONGING TO THE OLD MODEL PART, BASICALLY THE SAME AS THE PREVIOUS FUNCTION BUT THERE'S NO NEED TO INTERPOLATE SINCE THE NODES COORDINATES ALREADY EXIST. WE ONLY NEED TO COPY THEM TO THE NEW MODEL PART.
-    /** this function adds the skin condtion.
+    /** this function adds the skin condition.
         WARNING: They have to be triangles and it CAN'T be empty, otherwise a segmentation fault will appear
      * @param mr_model_part . original model part
      * @param mr__new_model_part . destinantion model part
@@ -266,7 +266,7 @@ public:
 					Node < 3 > ::Pointer pnode = new_model_part.CreateNewNode(number_of_nodes+number_of_previous_nodes, it_node->X(), it_node->Y(), it_node->Z());  //recordar que es el nueevo model part!!
 					pnode->SetBufferSize(this_model_part.NodesBegin()->GetBufferSize());
 					pnode->GetValue(FATHER_NODES).resize(0);
-					pnode->GetValue(FATHER_NODES).push_back( Node<3>::WeakPointer( *it_node.base() ) );       // we keep the same size despite we only need one. to have everyhing with the same size
+					pnode->GetValue(FATHER_NODES).push_back( Node<3>::WeakPointer( *it_node.base() ) );       // we keep the same size despite we only need one. to have everything with the same size
 					pnode->GetValue(FATHER_NODES).push_back( Node<3>::WeakPointer( *it_node.base() ) );
 					pnode-> GetValue(WEIGHT_FATHER_NODES) = 1.0;  //since both father node 1 and 2 are the same, any value between 0 and one would be ok.
 
@@ -396,7 +396,7 @@ public:
             exact_nodes = 0 ;
             Geometry<Node<3> >&geom = it->GetGeometry(); //geometry of the element
             for(unsigned int i = 0; i < it->GetGeometry().size() ; i++)          //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
             {
                 node_coord[0] = geom[i].X();
                 node_coord[1] = geom[i].Y();
@@ -428,7 +428,7 @@ public:
                             list_matching_nodes[i]= geom[i].Id();
                             break;
                         }
-                        //check this last condition, used to avoid talking points that belong to other node. might cause some problems when the plane is almost paralel to an edge. to be improved! (it seems to be working correcly even when the edge is part of the plane.)
+                        //check this last condition, used to avoid talking points that belong to other node. might cause some problems when the plane is almost parallel to an edge. to be improved! (it seems to be working correctly even when the edge is part of the plane.)
                         if ((dist_node_point*dist_neigh_point) < 0.0 && isovernode==false && (fabs(dist_neigh_point)>(tolerance))) // this means one is on top of the plane and the other on the bottom, no need to do more checks, it's in between!
                         {
                             int index_i = geom[i].Id() - 1;     //i node id
@@ -441,7 +441,7 @@ public:
                 } //closing the neighbour loop
             } //closing the nodes loop
 
-            //now we have to save the data. we should get a list with the elements that will genereate triangles and the total number of triangles
+            //now we have to save the data. we should get a list with the elements that will generate triangles and the total number of triangles
             Elems_In_Plane[current_element-1] = 0 ; //we initialize as 0
             if (exact_nodes!=3)   //this means at least one new node has to be generated
             {
@@ -456,7 +456,7 @@ public:
                     Elems_In_Plane[ current_element-1] = 2 ;
                 }
             }
-            else   //ok, now we'll only add the element if the normal of the plane matches the one of the triangle (created poiting towards the fourth node of the tetraedra)
+            else   //ok, now we'll only add the element if the normal of the plane matches the one of the triangle (created pointing towards the fourth node of the tetraedra)
             {
                 bool found_fourth_node=true; //this is the node that defines the normal of the element
                 for(unsigned int i = 0; i < it->GetGeometry().size() ; i++)          //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
@@ -619,7 +619,7 @@ public:
 
             Xp_1 = Xp - Coord_Node_1;
             Xp_2 = Coord_Node_2 - Coord_Node_1;
-            dist_node_intersect = (inner_prod(versor,Xp_1)) / (inner_prod(versor,Xp_2)) ; //line-plane interesection, this is a RELATIVE distance. ====>   point= Node1 + (Node2-Node1)*dist_node_intersect
+            dist_node_intersect = (inner_prod(versor,Xp_1)) / (inner_prod(versor,Xp_2)) ; //line-plane intersection, this is a RELATIVE distance. ====>   point= Node1 + (Node2-Node1)*dist_node_intersect
 //            dist_node_neigh = sqrt( pow((Coord_Node_1[0]- Coord_Node_2[0]),2) + pow((Coord_Node_1[1]- Coord_Node_2[1]),2) + pow((Coord_Node_1[2]- Coord_Node_2[2]),2) ) ; // distance between node and neighbour
             if (dist_node_point<=(tolerance))  dist_node_intersect=0.0;  // if it's too close to the first node then we just set the weight as 1
             weight = (1.0 - dist_node_intersect) ;  // dist_node_neigh;
@@ -712,7 +712,7 @@ public:
             ///we eter in the if for only one triangle in the tetraedra
             if (Elems_In_Plane[current_element-1] == 1 ) //do not forget than can be both 1 or 2 triangles per tetraedra. this is the simplest case. no need to check anything, we just create an element with the 3 nodes
             {
-                //checking element conectivities
+                //checking element connectivities
                 for(unsigned int i = 0; i < it->GetGeometry().size() ; i++)
                 {
                     Geometry<Node<3> >&geom = it->GetGeometry(); //i node of the element
@@ -723,7 +723,7 @@ public:
                         int index_j = geom[j].Id() - 1;
                         for (unsigned int l=0; l!=3; ++l)
                         {
-                            if(TriangleNodesArray[l]==Coord(index_i, index_j) //if we have already saved this node or it has not been cutted, then we have no new node to add (coord(i,j)=-1)
+                            if(TriangleNodesArray[l]==Coord(index_i, index_j) //if we have already saved this node or it has not been cut, then we have no new node to add (coord(i,j)=-1)
                                     || Coord(index_i, index_j) <1 )
                                 new_node=false;
                         }
@@ -780,7 +780,7 @@ public:
             {
                 //to fix this we'll first create a plane. see below
 
-                //checking conectivities to find nodes
+                //checking connectivities to find nodes
                 for(unsigned int i = 0; i < it->GetGeometry().size() ; i++) //nodo i
                 {
                     Geometry<Node<3> >&geom = it->GetGeometry();
@@ -827,7 +827,7 @@ public:
                     //now i have to create the new plane
                     MathUtils<double>::CrossProduct(temp_vector4, versor , temp_vector3); //done. now temp_vector4 is the (normal to the) new plane, perpendicular to the one containing the triangles
                     //the origin of the plane is temp_vector1 (temp_vector2 could also be used)
-                    //now we need to check distances to the other nodes (i+2 (let's call them jjj and i+3=kkk since we can't go futher than i=3)
+                    //now we need to check distances to the other nodes (i+2 (let's call them jjj and i+3=kkk since we can't go further than i=3)
                     if (iii==1)
                     {
                         jjj=2;

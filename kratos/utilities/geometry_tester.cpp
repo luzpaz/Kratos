@@ -49,7 +49,7 @@ namespace Kratos
 bool GeometryTesterUtility::RunTest(Model& rModel)
 {
     //create a cloud of 27 nodes, to be used in testing the geometries, so that 1 10 19 are on the same vertical
-    //side has a lenght 0f 2.0/3.0
+    //side has a length 0f 2.0/3.0
     //  25  26  27
     // 22  23  24
     //19--20--21
@@ -757,7 +757,7 @@ void GeometryTesterUtility::VerifyStrainExactness(
         for(std::size_t i=0; i<dim; i++) {
             VectorB[i]=i*i+0.567; //arbitrary values
             for(std::size_t j=0; j<dim; j++)
-                MatrixA(i,j)=i*j + 0.12345; //initialization fo the values of this matrix is arbitrary
+                MatrixA(i,j)=i*j + 0.12345; //initialization of the values of this matrix is arbitrary
         }
 
 

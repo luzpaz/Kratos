@@ -124,7 +124,7 @@ public:
 
 
     /// ADDSKINCONDITIONS: THIS FUNCTION ADDS TO THE NEW MODEL PART THE DATA OF THE CONDITIONS BELONGING TO THE MODEL PART
-    /** this function adds the skin condtion.
+    /** this function adds the skin condition.
         WARNING: They have to be triangles and it CAN'T be empty, otherwise a segmentation fault will appear
      **/
 
@@ -213,7 +213,7 @@ public:
             outside_nodes = 0;
             Geometry<Node < 3 > >&geom = it->GetGeometry(); //geometry of the element
             for (unsigned int i = 0; i < it->GetGeometry().size(); i++) //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
             {
                 node_value= geom[i].FastGetSolutionStepValue(variable);
                 diff_node_value = isovalue - node_value; // dist = (xnode-xp)*versor closest point-plane distance
@@ -236,7 +236,7 @@ public:
             } //closing the nodes (i) loop
 
 
-            //now we have to save the data. we should get a list with the elements that will genereate triangles and the total number of triangles
+            //now we have to save the data. we should get a list with the elements that will generate triangles and the total number of triangles
             if (exact_nodes < 4 || outside_nodes<2 )   //this means at least one new node has to be generated
             {
                 if (number_of_cuts == 6 || number_of_cuts == 6) //it can be 8, in that case we have 2 triangles (the cut generates a square)
@@ -246,7 +246,7 @@ public:
             if (print_element==true)
             {
                 for (unsigned int i = 0; i < it->GetGeometry().size(); i++) //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                    //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                    //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
                 {
                     int node_position = this_model_part.Nodes().find(geom[i].Id()) - it_begin_node_old;
                     m_used_nodes[node_position]=true;
@@ -254,7 +254,7 @@ public:
             }
         } //closing the elem loop
 
-        //cout << "Added nodes that are part of the isosurface to the priting list" << endl;
+        //cout << "Added nodes that are part of the isosurface to the printing list" << endl;
 
         KRATOS_CATCH("")
     }
@@ -306,7 +306,7 @@ public:
             outside_nodes = 0;
             Geometry<Node < 3 > >&geom = it->GetGeometry(); //geometry of the element
             for (unsigned int i = 0; i < it->GetGeometry().size(); i++) //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
             {
                 node_value= geom[i].FastGetSolutionStepValue(variable);
                 diff_node_value = isovalue - node_value; // dist = (xnode-xp)*versor closest point-plane distance
@@ -329,7 +329,7 @@ public:
             } //closing the nodes (i) loop
 
 
-            //now we have to save the data. we should get a list with the elements that will genereate triangles and the total number of triangles
+            //now we have to save the data. we should get a list with the elements that will generate triangles and the total number of triangles
             if (exact_nodes < 4 || outside_nodes<2 )   //this means at least one new node has to be generated
             {
                 if (number_of_cuts == 6 || number_of_cuts == 6) //it can be 8, in that case we have 2 triangles (the cut generates a square)
@@ -339,7 +339,7 @@ public:
             if (print_element==true)
             {
                 for (unsigned int i = 0; i < it->GetGeometry().size(); i++) //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                    //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                    //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
                 {
                     int node_position = this_model_part.Nodes().find(geom[i].Id()) - it_begin_node_old;
                     m_used_nodes[node_position]=true;
@@ -360,7 +360,7 @@ public:
             //*++i;
         }//closing node loop
 
-        //cout << "Added nodes that are part of the isosurface to the priting list" << endl;
+        //cout << "Added nodes that are part of the isosurface to the printing list" << endl;
 
         KRATOS_CATCH("")
     }
@@ -411,7 +411,7 @@ public:
             outside_nodes = 0;
             Geometry<Node < 3 > >&geom = it->GetGeometry(); //geometry of the element
             for (unsigned int i = 0; i < it->GetGeometry().size(); i++) //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
             {
                 node_value= geom[i].FastGetSolutionStepValue(variable);
                 diff_node_value = isovalue - node_value; // dist = (xnode-xp)*versor closest point-plane distance
@@ -434,7 +434,7 @@ public:
             } //closing the nodes (i) loop
 
 
-            //now we have to save the data. we should get a list with the elements that will genereate triangles and the total number of triangles
+            //now we have to save the data. we should get a list with the elements that will generate triangles and the total number of triangles
             if (exact_nodes < 4 || outside_nodes<2 )   //this means at least one new node has to be generated
             {
                 if (number_of_cuts == 6 || number_of_cuts == 6) //it can be 8, in that case we have 2 triangles (the cut generates a square)
@@ -444,7 +444,7 @@ public:
             if (print_element==true)
             {
                 for (unsigned int i = 0; i < it->GetGeometry().size(); i++) //size = 4 ; nodes per element. NOTICE WE'LL BE LOOPING THE EDGES TWICE. THIS IS A WASTE OF TIME BUT MAKES IT EASIER TO IDENTITY ELEMENTS. LOOK BELOW.
-                    //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cutted 8 times then we have 2 triangles (or a cuatrilateral, the same)
+                    //when we have a triangle inside a thetraedra, its edges (or nodes) must be cut 3 times by the plane. if we loop all 2 times we can have a counter. when it's = 6 then we have a triangle. when tetraedras are cut 8 times then we have 2 triangles (or a cuatrilateral, the same)
                 {
                     int node_position = this_model_part.Nodes().find(geom[i].Id()) - it_begin_node_old;
                     m_used_nodes[node_position]=true;
@@ -465,7 +465,7 @@ public:
             //*++i;
         }//closing node loop
 
-        //cout << "Added nodes that are part of the isosurface to the priting list" << endl;
+        //cout << "Added nodes that are part of the isosurface to the printing list" << endl;
 
         KRATOS_CATCH("")
     }

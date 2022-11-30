@@ -84,7 +84,7 @@ public:
 
     /**
      * @brief Compute the SVD
-     * Computes the Singular Value Decomposition (SVD) of the given imput matrix
+     * Computes the Singular Value Decomposition (SVD) of the given input matrix
      * @param rInputMatrix Matrix to compute the SVD decomposition
      * @param Settings Settings for the SVD decomposition
      */
@@ -142,7 +142,7 @@ public:
      * @brief Set the relative threshold tolerance
      * This method sets the relative threshold tolerance to consider singular values as non-zero
      * This is required by some methods like Rank() or Solve(), which is not available yet
-     * Non-zero values are checed as sing_val > rel_tol * max_sing_val
+     * Non-zero values are checked as sing_val > rel_tol * max_sing_val
      * @param RelTolerance
      */
     virtual void SetThreshold(const double RelTolerance) = 0;

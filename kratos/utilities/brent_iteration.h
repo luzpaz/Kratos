@@ -31,7 +31,7 @@ class BrentIteration
 public:
 
     /**
-     Find a root of Funtion in the range defined by Guess1 and Guess2.
+     Find a root of Function in the range defined by Guess1 and Guess2.
      Function is something that takes a double and returns a double.
      Note that Guess1 and Guess2 must be on opposite sides of the
      root, that is Function(Guess1)*Function(Guess2) < 0.0.

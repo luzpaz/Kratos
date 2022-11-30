@@ -109,7 +109,7 @@ public:
         array_1d<double, n_nodes> exact_distance = rDistances;
         array_1d<double, n_nodes> abs_distance = ZeroVector(n_nodes);
 
-        //compute edge lenghts and max_lenght
+        //compute edge lengths and max_lenght
         double max_lenght = 0.0;
         for (int edge = 0; edge < n_edges; edge++)
         {
@@ -153,7 +153,7 @@ public:
             //~ max_pos_d = std::max(max_pos_d, rDistances[i]);
         //~ }
         
-        //~ //modify the positve distance values to avoid undesired cuts
+        //~ //modify the positive distance values to avoid undesired cuts
         //~ double tol_rel_d = 1e-3; // relative tolerance for the max and min distances comparison
         
         //~ for (unsigned int i=0; i<4; i++)
@@ -161,7 +161,7 @@ public:
             //~ //check the positive distance nodes
             //~ if (rDistances[i] > 0.0)
             //~ {
-                //~ //modify the distance if it is below the relative treshold
+                //~ //modify the distance if it is below the relative threshold
                 //~ if (fabs(rDistances[i]/max_neg_d) < tol_rel_d)
                 //~ {
                     //~ std::cout << "Distance modified from " << rDistances[i] << " to " << rDistances[i]+0.00001*max_lenght*(max_pos_d - max_neg_d) << std::endl;

@@ -144,7 +144,7 @@ public:
      * @param rConditions A set of conditions defining the "skin" of a model
      * @param Dimension Spatial dimension (2 or 3)
      * @param rNormalVariable Component variable storing the normal value
-     * @note This function is not recommended for distributed (MPI) runs, as the user has to ensure that the calculated normals are assembled between processes. The overload of this function that takes a ModelPart is preferable in ths case, as it performs the required communication.
+     * @note This function is not recommended for distributed (MPI) runs, as the user has to ensure that the calculated normals are assembled between processes. The overload of this function that takes a ModelPart is preferable in this case, as it performs the required communication.
      */
     void CalculateOnSimplex(
         ConditionsArrayType& rConditions,
@@ -158,7 +158,7 @@ public:
      * @param rConditions A set of conditions defining the "skin" of a model
      * @param Dimension Spatial dimension (2 or 3)
      * @param rNormalVariable Component variable storing the normal value
-     * @note This function is not recommended for distributed (MPI) runs, as the user has to ensure that the calculated normals are assembled between processes. The overload of this function that takes a ModelPart is preferable in ths case, as it performs the required communication.
+     * @note This function is not recommended for distributed (MPI) runs, as the user has to ensure that the calculated normals are assembled between processes. The overload of this function that takes a ModelPart is preferable in this case, as it performs the required communication.
      */
     void CalculateOnSimplexNonHistorical(
         ConditionsArrayType& rConditions,
@@ -183,7 +183,7 @@ public:
      * @param rModelPart ModelPart of the problem. Must have a set of conditions defining the "skin" of the domain
      * @param Dimension Spatial dimension (2 or 3)
      * @param rNormalVariable Component variable storing the normal value
-     * @note Use this fuction instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
+     * @note Use this function instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
      */
     void CalculateOnSimplex(
         ModelPart& rModelPart,
@@ -197,7 +197,7 @@ public:
      * @param rModelPart ModelPart of the problem. Must have a set of conditions defining the "skin" of the domain
      * @param Dimension Spatial dimension (2 or 3)
      * @param rNormalVariable Component variable storing the normal value
-     * @note Use this fuction instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
+     * @note Use this function instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
      */
     void CalculateOnSimplexNonHistorical(
         ModelPart& rModelPart,
@@ -210,7 +210,7 @@ public:
      * @details This is done on the base of the Conditions provided which should be  understood as the surface elements of the area of interest.
      * @param rModelPart ModelPart of the problem. Must have a set of conditions defining the "skin" of the domain
      * @param rNormalVariable Component variable storing the normal value
-     * @note Use this fuction instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
+     * @note Use this function instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
      */
     void CalculateOnSimplex(
         ModelPart& rModelPart,
@@ -222,7 +222,7 @@ public:
      * @details This is done on the base of the Conditions provided which should be  understood as the surface elements of the area of interest.
      * @param rModelPart ModelPart of the problem. Must have a set of conditions defining the "skin" of the domain
      * @param rNormalVariable Component variable storing the normal value
-     * @note Use this fuction instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
+     * @note Use this function instead of its overload taking a Conditions array for MPI applications, as it will take care of communication between partitions.
      */
     void CalculateOnSimplexNonHistorical(
         ModelPart& rModelPart,
@@ -315,7 +315,7 @@ public:
     }
 
     /**
-     *  @brief Calculates the area normal (vector oriented as the normal with a dimension proportional to the area) using only nodes marked with a flag variable and detecting corners. Corners are defined as nodes that recieves more than 2 normals from their neighbor conditions with a difference in angle greater than Alpha .
+     *  @brief Calculates the area normal (vector oriented as the normal with a dimension proportional to the area) using only nodes marked with a flag variable and detecting corners. Corners are defined as nodes that receives more than 2 normals from their neighbor conditions with a difference in angle greater than Alpha .
      * @details This function is equivalent to other implementations of CalculateOnSimplex, but instead of using all conditions in the array, it only uses those that contain a value of rVariable != Zero. This is useful in problems where a part of the boundary is a slip condition, as it provides more reasonable values for the normals on the border between this area and other parts of the boundary. This function is safe to use in MPI.
      * @param rModelPart ModelPart of the problem. Must have a set of conditions defining the "skin" of the domain.
      * @param Dimension Spatial dimension (2 or 3).
@@ -431,7 +431,7 @@ public:
     }
 
     /**
-     *  @brief Calculates the area normal (vector oriented as the normal with a dimension proportional to the area) using only nodes marked with a flag variable and detecting corners. Corners are defined as nodes that recieves more than 2 normals from their neighbor conditions with a difference in angle greater than Alpha . (Low memory version)
+     *  @brief Calculates the area normal (vector oriented as the normal with a dimension proportional to the area) using only nodes marked with a flag variable and detecting corners. Corners are defined as nodes that receives more than 2 normals from their neighbor conditions with a difference in angle greater than Alpha . (Low memory version)
      * @details This function is equivalent to other implementations of CalculateOnSimplex, but instead of using all conditions in the array, it only uses those that contain a value of rVariable != Zero. This is useful in problems where a part of the boundary is a slip condition, as it provides more reasonable values for the normals on the border between this area and other parts of the boundary. This function is safe to use in MPI.
      * @param rModelPart ModelPart of the problem. Must have a set of conditions defining the "skin" of the domain.
      * @param Dimension Spatial dimension (2 or 3).
@@ -562,7 +562,7 @@ private:
     ///@{
 
     /**
-     * @brief It initializes the normal in the entites and in all the nodes
+     * @brief It initializes the normal in the entities and in all the nodes
      * @param rModelPart The model part to compute
      * @param rNormalVariable Component variable storing the normal value
      * @tparam TContainerType Type of the container that will store the entities for the normal calculation

@@ -259,7 +259,7 @@ private:
     /**
      * @brief InterpolateMeshVariableToSkin specialization method
      * For a provided set of variables, this method interpolates the values
-     * from the brackground fluid mesh to an embedded skin mesh. This can
+     * from the background fluid mesh to an embedded skin mesh. This can
      * be done for either the positive or negative sides of the interface.
      * @tparam TVarType variable type of the variable to be interpolated
      * @param rMeshVariable variable in the background mesh to interpolate from
@@ -382,7 +382,7 @@ private:
      * @brief Get the condition type
      * Depending on the dimension template argument, this method returns
      * the condition type name (LineCondition2D2N or SurfaceCondition3D3N)
-     * @return std::sting condition type name
+     * @return std::string condition type name
      */
     static const std::string GetConditionType();
 

@@ -231,7 +231,7 @@ public:
                 double distance;
                 double discriminant = b * b - 4.0 * a*c;
 
-                if (discriminant < 0.0) //element distance computation fails - we may have to tread specially this node
+                if (discriminant < 0.0) //element distance computation fails - we may have to treat this node specially
                 {
                     distance = -b / (2.0*a);
 //                         failed_nodes.push_back(geom(unknown_node_index));
@@ -381,7 +381,7 @@ public:
                     KRATOS_WATCH(it->Id());
                     // 						KRATOS_WATCH("distance is set to zero:");
                     //it->FastGetSolutionStepValue(rDistanceVar) = 0.0;
-                    KRATOS_THROW_ERROR(std::logic_error, "no neighbour nodes was succesfully computed ... impossible to recover", "");
+                    KRATOS_THROW_ERROR(std::logic_error, "no neighbour nodes was successfully computed ... impossible to recover", "");
                 }
             }
         }
@@ -398,7 +398,7 @@ public:
 
 
     /*@} */
-    /**@name Acces */
+    /**@name Access */
     /*@{ */
 
 
@@ -453,7 +453,7 @@ private:
 
 
     /*@} */
-    /**@name Private  Acces */
+    /**@name Private  Access */
     /*@{ */
 
 

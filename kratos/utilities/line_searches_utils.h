@@ -463,7 +463,7 @@ protected:
         KRATOS_CATCH("")
     }
 
-}; // end class lineseaches
+}; // end class linesearches
 } // namespace Kratos
 #endif
 

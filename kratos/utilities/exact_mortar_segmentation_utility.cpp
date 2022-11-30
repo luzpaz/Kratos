@@ -40,7 +40,7 @@ bool ExactMortarIntegrationUtility<2, 2, false>::GetExactIntegration(
     double total_weight = 0.0;
     array_1d<double, 2> auxiliar_coordinates = ZeroVector(2);
 
-    // Declaring auxiliar values
+    // Declaring auxiliary values
     PointType projected_gp_global;
     GeometryType::CoordinatesArrayType projected_gp_local;
 
@@ -90,7 +90,7 @@ bool ExactMortarIntegrationUtility<2, 2, false>::GetExactIntegration(
             } else if (std::abs(auxiliar_coordinates[1] - 1.0) < tolerance) { // NOTE: Equivalent to == 1.0
                 auxiliar_coordinates[0] = auxiliar_xi[0];
             } else {
-                KRATOS_ERROR << "THIS IS NOT SUPPOSED TO HAPPEN. Auxiliar local coordinate: " <<  auxiliar_xi[0] << ". Auxiliar coordinates: " << auxiliar_coordinates[0] << " , " << auxiliar_coordinates[1] << std::endl;
+                KRATOS_ERROR << "THIS IS NOT SUPPOSED TO HAPPEN. Auxiliary local coordinate: " <<  auxiliar_xi[0] << ". Auxiliary coordinates: " << auxiliar_coordinates[0] << " , " << auxiliar_coordinates[1] << std::endl;
             }
         } else if ( auxiliar_xi.size() == 2) { // Both nodes of the master belong to the slave (and none of the nodes of the slave belong to the master, the nodes can coincide, there is no other possibility)
             if (std::abs(auxiliar_coordinates[0] + 1.0) < tolerance) { // NOTE: Equivalent to == -1.0. In this case the node in the left edge is already assigned
@@ -116,7 +116,7 @@ bool ExactMortarIntegrationUtility<2, 2, false>::GetExactIntegration(
     KRATOS_ERROR_IF(total_weight < 0.0) << "Wrong order of the coordinates: "<< auxiliar_coordinates << std::endl;
     KRATOS_ERROR_IF(total_weight > 2.0) << "Impossible, Weight higher than 2: "<< auxiliar_coordinates << std::endl;
 
-    // We do the final assignmen
+    // We do the final assignment
     if (total_weight > ZeroTolerance) {
         rConditionsPointsSlave.resize(1);
         array_1d<PointType, 2> list_points;
@@ -145,7 +145,7 @@ bool ExactMortarIntegrationUtility<3, 3, false>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -154,11 +154,11 @@ bool ExactMortarIntegrationUtility<3, 3, false>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(3);
     PointerVector<PointType> points_array_master(3);
 
-    // Auxiliar values for projections
+    // Auxiliary values for projections
     PointType aux_point;
     double distance;
 
@@ -230,7 +230,7 @@ bool ExactMortarIntegrationUtility<3, 4, false>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -239,12 +239,12 @@ bool ExactMortarIntegrationUtility<3, 4, false>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(4);
     PointerVector<PointType> points_array_slave_not_rotated(4);
     PointerVector<PointType> points_array_master(4);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance_slave, distance_master;
 
@@ -312,7 +312,7 @@ bool ExactMortarIntegrationUtility<3, 3, false, 4>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -321,11 +321,11 @@ bool ExactMortarIntegrationUtility<3, 3, false, 4>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(3);
     PointerVector<PointType> points_array_master(4);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance;
 
@@ -406,7 +406,7 @@ bool ExactMortarIntegrationUtility<3, 4, false, 3>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -415,11 +415,11 @@ bool ExactMortarIntegrationUtility<3, 4, false, 3>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance;
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(4);
     PointerVector<PointType> points_array_slave_not_rotated(4);
     PointerVector<PointType> points_array_master(3);
@@ -512,7 +512,7 @@ bool ExactMortarIntegrationUtility<2, 2, true>::GetExactIntegration(
     array_1d<double, 2> auxiliar_coordinates = ZeroVector(2);
     array_1d<PointBelongsLine2D2N, 2> auxiliar_belong;
 
-    // Declaring auxiliar values
+    // Declaring auxiliary values
     PointType projected_gp_global;
     GeometryType::CoordinatesArrayType projected_gp_local;
 
@@ -568,7 +568,7 @@ bool ExactMortarIntegrationUtility<2, 2, true>::GetExactIntegration(
                 auxiliar_coordinates[0] = auxiliar_xi[0];
                 auxiliar_belong[0] = auxiliar_master_belong[0];
             } else {
-                KRATOS_ERROR << "THIS IS NOT SUPPOSED TO HAPPEN. Auxiliar local coordinate: " <<  auxiliar_xi[0] << ". Auxiliar coordinates: " << auxiliar_coordinates[0] << " , " << auxiliar_coordinates[1] << std::endl;
+                KRATOS_ERROR << "THIS IS NOT SUPPOSED TO HAPPEN. Auxiliary local coordinate: " <<  auxiliar_xi[0] << ". Auxiliary coordinates: " << auxiliar_coordinates[0] << " , " << auxiliar_coordinates[1] << std::endl;
             }
         } else if ( auxiliar_xi.size() == 2) { // Both nodes of the master belong to the slave (and none of the nodes of the slave belong to the master, the nodes can coincide, there is no other possibility)
             if (std::abs(auxiliar_coordinates[0] + 1.0) < tolerance) { // NOTE: Equivalent to == -1.0. In this case the node in the left edge is already assigned
@@ -600,7 +600,7 @@ bool ExactMortarIntegrationUtility<2, 2, true>::GetExactIntegration(
     KRATOS_ERROR_IF(total_weight < 0.0) << "Wrong order of the coordinates: "<< auxiliar_coordinates << std::endl;
     KRATOS_ERROR_IF(total_weight > 2.0) << "Impossible, Weight higher than 2: "<< auxiliar_coordinates << std::endl;
 
-    // We do the final assignmen
+    // We do the final assignment
     if (total_weight > ZeroTolerance) {
         rConditionsPointsSlave.resize(1);
         array_1d<PointBelong<2>, 2> list_points;
@@ -631,7 +631,7 @@ bool ExactMortarIntegrationUtility<3, 3, true>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -640,11 +640,11 @@ bool ExactMortarIntegrationUtility<3, 3, true>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(3);
     PointerVector<PointType> points_array_master(3);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance;
 
@@ -711,7 +711,7 @@ bool ExactMortarIntegrationUtility<3, 4, true>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -720,12 +720,12 @@ bool ExactMortarIntegrationUtility<3, 4, true>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(4);
     PointerVector<PointType> points_array_slave_not_rotated(4);
     PointerVector<PointType> points_array_master(4);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance_slave, distance_master;
 
@@ -793,7 +793,7 @@ bool ExactMortarIntegrationUtility<3, 3, true, 4>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -802,11 +802,11 @@ bool ExactMortarIntegrationUtility<3, 3, true, 4>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(3);
     PointerVector<PointType> points_array_master(4);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance;
 
@@ -887,7 +887,7 @@ bool ExactMortarIntegrationUtility<3, 4, true, 3>::GetExactIntegration(
     ConditionArrayListType& rConditionsPointsSlave
     )
 {
-    // Firt we create an auxiliar plane based in the condition center and its normal
+    // First we create an auxiliary plane based in the condition center and its normal
     const PointType slave_center = rOriginalSlaveGeometry.Center();
 
     // We define the condition tangents
@@ -896,12 +896,12 @@ bool ExactMortarIntegrationUtility<3, 4, true, 3>::GetExactIntegration(
     array_1d<double, 3> slave_tangent_eta;
     MathUtils<double>::CrossProduct( slave_tangent_eta, rSlaveNormal, slave_tangent_xi);
 
-    // We define the auxiliar geometry
+    // We define the auxiliary geometry
     PointerVector<PointType> points_array_slave(4);
     PointerVector<PointType> points_array_slave_not_rotated(4);
     PointerVector<PointType> points_array_master(3);
 
-    // Auxiliar values
+    // Auxiliary values
     PointType aux_point;
     double distance;
 
@@ -1106,7 +1106,7 @@ double ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>:
     Condition::Pointer pMasterCond
     )
 {
-    // Initalize values
+    // Initialize values
     double area = 0.0;
     double local_area = 0.0;
     const bool is_inside = GetExactAreaIntegration(pSlaveCond->GetGeometry(), pSlaveCond->GetValue(NORMAL), pMasterCond->GetGeometry(), pMasterCond->GetValue(NORMAL), local_area);
@@ -1124,7 +1124,7 @@ double ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>:
     Condition::Pointer pSlaveCond
     )
 {
-    // Initalize values
+    // Initialize values
     double area = 0.0;
 
     if ( pSlaveCond->Has( INDEX_MAP )) {
@@ -1171,7 +1171,7 @@ void ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>::T
             r_cond.Reset(VISITED);
         }
 
-        // Auxiliar values
+        // Auxiliary values
         IndexType node_counter = rMainModelPart.NumberOfNodes() + 1;
         IndexType cond_counter = rMainModelPart.NumberOfConditions() + 1;
 
@@ -1323,7 +1323,7 @@ void ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>::T
 template<SizeType TDim, SizeType TNumNodes, bool TBelong, SizeType TNumNodesMaster>
 void ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>::GetIntegrationMethod()
 {
-    // Setting the auxiliar integration points
+    // Setting the auxiliary integration points
     switch (mIntegrationOrder) {
         case 1:
             mAuxIntegrationMethod = GeometryData::IntegrationMethod::GI_GAUSS_1;
@@ -1352,7 +1352,7 @@ void ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>::G
 template<SizeType TDim, SizeType TNumNodes, bool TBelong, SizeType TNumNodesMaster>
 GeometryType::IntegrationPointsArrayType ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMaster>::GetIntegrationTriangle()
 {
-    // Setting the auxiliar integration points
+    // Setting the auxiliary integration points
     switch (mIntegrationOrder) {
         case 1:
             return Quadrature<TriangleGaussLegendreIntegrationPoints1, 2, IntegrationPoint<3> >::GenerateIntegrationPoints();
@@ -1476,7 +1476,7 @@ inline bool ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMas
     // We compose the triangles
     const SizeType list_size = rPointList.size();
     if (list_size >  2) { // Technically the minimum is three, just in case I consider 2
-        // Declaring auxiliar local point
+        // Declaring auxiliary local point
         PointType local_point;
         PointListType aux_master_point_list(list_size);
 
@@ -1522,11 +1522,11 @@ inline bool ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMas
                 // We add the triangle to the vector
                 rConditionsPointsSlave[aux_elem_index] = points_locals_slave;
 
-                // We update the auxiliar index
+                // We update the auxiliary index
                 ++aux_elem_index;
             }
         } else {
-            // We will check if the triangle is inside the slave geometry, so we will compute an auxiliar shape function
+            // We will check if the triangle is inside the slave geometry, so we will compute an auxiliary shape function
             array_1d<double, 2> auxiliar_slave_center_local_coords, auxiliar_master_center_local_coords;
 
             // We compute the angles between the nodes
@@ -1562,7 +1562,7 @@ inline bool ExactMortarIntegrationUtility<TDim, TNumNodes, TBelong, TNumNodesMas
                 // We add the triangle to the vector
                 rConditionsPointsSlave[aux_elem_index] = points_locals_slave;
 
-                // We update the auxiliar index
+                // We update the auxiliary index
                 ++aux_elem_index;
             }
         }

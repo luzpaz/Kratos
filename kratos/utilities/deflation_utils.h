@@ -111,7 +111,7 @@ public:
         SparseMatrixType A(rNodes.size(),rNodes.size());
         SparseMatrixType Adeflated;
 
-        //first of all build the connectivty matrix
+        //first of all build the connectivity matrix
         std::vector< std::vector<int> > index_list(rNodes.size());
 
         std::size_t total_size = 0;
@@ -143,7 +143,7 @@ public:
                 indices.push_back(index_j);
             }
 
-            //sorting the indices and elminating the duplicates
+            //sorting the indices and eliminating the duplicates
             std::sort(indices.begin(),indices.end());
             std::vector<int>::iterator new_end = std::unique(indices.begin(),indices.end());
 
@@ -181,7 +181,7 @@ public:
     }
 
     ///this function constructs the structure of a smaller matrix using a technique taken from MIS aggregation
-    ///the algorythm is taken from the pyamg lib
+    ///the algorithm is taken from the pyamg lib
     static void ConstructW(const std::size_t max_reduced_size, SparseMatrixType& rA, std::vector<int>& w, SparseMatrixType&  deflatedA)
     {
         KRATOS_TRY
@@ -412,7 +412,7 @@ public:
     /*@{ */
 
     /*@} */
-    /**@name Acces */
+    /**@name Access */
     /*@{ */
 
 
@@ -651,7 +651,7 @@ private:
 
 
     /*@} */
-    /**@name Private  Acces */
+    /**@name Private  Access */
     /*@{ */
 
 

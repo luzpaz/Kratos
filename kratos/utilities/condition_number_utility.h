@@ -70,7 +70,7 @@ public:
     /// Pointer definition of ConditionNumberUtility
     KRATOS_CLASS_POINTER_DEFINITION( ConditionNumberUtility );
 
-    /// The sisze type
+    /// The size type
     typedef std::size_t SizeType;
 
     /// The index type

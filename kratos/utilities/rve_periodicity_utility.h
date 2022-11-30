@@ -144,9 +144,9 @@ class KRATOS_API(KRATOS_CORE) RVEPeriodicityUtility
 
     /**
     * @brief This method appends the weights and ids to construct the MPC
-    * @param rAux The auxiliar map containing the ids and tuples
+    * @param rAux The auxiliary map containing the ids and tuples
     * @param MasterId The id of the master dof
-    * @param MasterWeight The constribution of the master dof in the MPC
+    * @param MasterWeight The contribution of the master dof in the MPC
     * @param rFinalMastersIds The resulting vector of ids
     * @param rFinalMastersWeights The resulting vector of weights
     * @param rFinalT The resulting vector of constants (rigid displacements)

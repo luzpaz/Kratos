@@ -85,7 +85,7 @@ public:
 
     /**
      * @brief Compute the QR
-     * Computes the QR Decomposition (QR) of the given imput matrix
+     * Computes the QR Decomposition (QR) of the given input matrix
      * Note that the input matrix is modidifed
      * @param rInputMatrix Matrix to compute the QR decomposition
      */

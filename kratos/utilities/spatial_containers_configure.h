@@ -52,7 +52,7 @@ namespace Kratos
 /**
  * @class SpatialContainersConfigure
  * @ingroup KratosCore
- * @brief Thhis class is a container for spatial search
+ * @brief This class is a container for spatial search
  * @details It is used in binbased locator among other classes and utilities
  * @tparam TDimension The working dimension
  * @tparam TEntity The entity considered

@@ -101,7 +101,7 @@ public:
     /**
      * @brief Calculates rotation operator for given point
      *
-     * This metod calculates rotation matrix for a given point. Nodal NORMAL variable should be
+     * This method calculates rotation matrix for a given point. Nodal NORMAL variable should be
      * assigned properly since rotation is calculated based on it.
      *
      * @param rRotationMatrix   Output rotation matrix
@@ -176,7 +176,7 @@ public:
         rRot(1, 1) = rT1[1];
         rRot(1, 2) = rT1[2];
 
-        // The third base component is choosen as N x T1, which is normalized by construction
+        // The third base component is chosen as N x T1, which is normalized by construction
         rRot(2, 0) = rRot(0, 1) * rT1[2] - rRot(0, 2) * rT1[1];
         rRot(2, 1) = rRot(0, 2) * rT1[0] - rRot(0, 0) * rT1[2];
         rRot(2, 2) = rRot(0, 0) * rT1[1] - rRot(0, 1) * rT1[0];
@@ -202,7 +202,7 @@ public:
      * @brief Calculates rotation nodal matrix shape sensitivities
      *
      * This method calculates shape sensitivities of rotation matrix for given node.
-     * Nodal NORMAL(historical data container) and NORMAL_SHAPE_SENSITIVITY(non-historical data contaienr) variables
+     * Nodal NORMAL(historical data container) and NORMAL_SHAPE_SENSITIVITY(non-historical data container) variables
      * should be properly initialized.
      *
      * NORMAL_SHAPE_SENSITIVITY matrix should be properly sized and initialized with proper shape sensitivity values
@@ -252,7 +252,7 @@ public:
      * @brief Calculate 2d rotation nodal matrix shape sensitivities
      *
      * This method calculates shape sensitivities of 2D rotation matrix for given node.
-     * Nodal NORMAL(historical data container) and NORMAL_SHAPE_SENSITIVITY(non-historical data contaienr) variables
+     * Nodal NORMAL(historical data container) and NORMAL_SHAPE_SENSITIVITY(non-historical data container) variables
      * should be properly initialized.
      *
      * NORMAL_SHAPE_SENSITIVITY matrix should be properly sized and initialized with proper shape sensitivity values
@@ -330,7 +330,7 @@ public:
      * @brief Calculate 3d rotation nodal matrix shape sensitivities
      *
      * This method calculates shape sensitivities of 3D rotation matrix for given node.
-     * Nodal NORMAL(historical data container) and NORMAL_SHAPE_SENSITIVITY(non-historical data contaienr) variables
+     * Nodal NORMAL(historical data container) and NORMAL_SHAPE_SENSITIVITY(non-historical data container) variables
      * should be properly initialized.
      *
      * NORMAL_SHAPE_SENSITIVITY matrix should be properly sized and initialized with proper shape sensitivity values
@@ -974,7 +974,7 @@ protected:
 		rRot(TSkip+1,TSkip+1) = rT1[1];
 		rRot(TSkip+1,TSkip+2) = rT1[2];
 
-		// The third base component is choosen as N x T1, which is normalized by construction
+		// The third base component is chosen as N x T1, which is normalized by construction
 		rRot(TSkip+2,TSkip  ) = rRot(TSkip,TSkip+1)*rT1[2] - rRot(TSkip,TSkip+2)*rT1[1];
 		rRot(TSkip+2,TSkip+1) = rRot(TSkip,TSkip+2)*rT1[0] - rRot(TSkip,TSkip  )*rT1[2];
 		rRot(TSkip+2,TSkip+2) = rRot(TSkip,TSkip  )*rT1[1] - rRot(TSkip,TSkip+1)*rT1[0];
@@ -1055,7 +1055,7 @@ private:
 //     /// Compute a rotation matrix to transform values from the cartesian base to one oriented with the node's normal
 //     /**
 //      * The normal is read from solution step data NORMAL. Use NormalCalculationUtils::CalculateOnSimplex to
-//      * obtain and store the nodal normal from the normals of the model's conditons.
+//      * obtain and store the nodal normal from the normals of the model's conditions.
 //      * @param rRot The rotation matrix (output)
 //      * @param rThisPoint The point used to orient the new coordinate system.
 //      * @see NormalCalculationUtils
@@ -1099,7 +1099,7 @@ private:
 //             rT1 -= dot * rN;
 //             this->Normalize(rT1);
 //
-//             // The third base component is choosen as N x T1, which is normalized by construction
+//             // The third base component is chosen as N x T1, which is normalized by construction
 //             ThisRowType rT2(rRot,2);
 //             rT2(0) = rN(1)*rT1(2) - rN(2)*rT1(1);
 //             rT2(1) = rN(2)*rT1(0) - rN(0)*rT1(2);

@@ -50,7 +50,7 @@ namespace Kratos
  * @class BinBasedFastPointLocatorConditions
  * @ingroup KratosCore
  * @brief This class is designed to allow the fast location of MANY points on the top of a 3D mesh. (for conditions)
- * @details The utility relies on the creation of a Bin of objects that allows finding quikly a reduced number of condition candidates for the location of a point.
+ * @details The utility relies on the creation of a Bin of objects that allows finding quickly a reduced number of condition candidates for the location of a point.
  * The basic idea is to allow finding the condition in which a given spatial position sits
  * The user should call the function "UpdateSearchDatabase" to mount the bin and subsequently locate the points as needed
  * @author  Vicente Mataix Ferrandiz

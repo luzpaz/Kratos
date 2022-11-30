@@ -362,7 +362,7 @@ void ReadMaterialsUtility::CreateSubProperties(
         // Define subproperties
         Properties::Pointer p_new_sub_prop = nullptr;
         if (sub_prop.Has("use_existing_property")) {
-            // We get the adress if any
+            // We get the address if any
             const std::string& r_use_existing_property = sub_prop["use_existing_property"].GetString();
 
             // TODO why cannot we directly ask the modelpart with the address?
@@ -514,7 +514,7 @@ void ReadMaterialsUtility::CheckUniqueMaterialAssignment(Parameters Materials)
             for (IndexType j = i; j < num_props; ++j) {
                 KRATOS_ERROR_IF(parent_model_part_name == model_part_names[j])
                     << "Materials for SubModelPart \""
-                    << model_part_names[i] << "\" is being overrided by Parent Model Part \""
+                    << model_part_names[i] << "\" is being overridden by Parent Model Part \""
                     << parent_model_part_name << "\"!" << std::endl;
             }
         }

@@ -155,14 +155,14 @@ class KRATOS_API(KRATOS_CORE) AssignUniqueModelPartCollectionTagUtility
         );
 
     /**
-     * @brief This method returns the list submodelpart to be computed (it searchs recursively to find the subsubmodelparts if necessary)
+     * @brief This method returns the list submodelpart to be computed (it searches recursively to find the subsubmodelparts if necessary)
      * @param ThisModelPart The main model part computed
      * @return The vector containing the list of submodelparts and subsubmodelparts
      */
     static StringVectorType GetRecursiveSubModelPartNames(ModelPart& ThisModelPart, std::string Prefix = std::string());
 
     /**
-     * @brief This method returns the submodelpart to be computed (it searchs recursively to find the subsubmodelparts if necessary)
+     * @brief This method returns the submodelpart to be computed (it searches recursively to find the subsubmodelparts if necessary)
      * @param ThisModelPart The main model part computed
      * @param SubModelPartName The name of the submodelpart to look for
      * @return The submodelpart relative to the name given

@@ -52,8 +52,8 @@ namespace Kratos
 /**
  * @class MathUtils
  * @ingroup KratosCore
- * @brief Various mathematical utilitiy functions
- * @details Various mathematical utilitiy functions. Defines several utility functions.
+ * @brief Various mathematical utility functions
+ * @details Various mathematical utility functions. Defines several utility functions.
  * @author Riccardo Rossi
  * @author Pooyan Dadvand
  */
@@ -1417,11 +1417,11 @@ public:
     /**
      * @brief Transforms a given symmetric Strain Tensor to Voigt Notation:
      * @details The following cases:
-     *  - In the 3D case: from a second order tensor (3*3) Matrix  to a corresponing (6*1) Vector
+     *  - In the 3D case: from a second order tensor (3*3) Matrix  to a corresponding (6*1) Vector
      *    \f$ [ e11, e22, e33, 2*e12, 2*e23, 2*e13 ] \f$ for 3D case and
-     *  - In the 2D case: from a second order tensor (3*3) Matrix  to a corresponing (4*1) Vector
+     *  - In the 2D case: from a second order tensor (3*3) Matrix  to a corresponding (4*1) Vector
      *    \f$ [ e11, e22, e33, 2*e12 ] \f$ fir 2D case.
-     *  - In the 2D case: from a second order tensor (2*2) Matrix  to a corresponing (3*1) Vector
+     *  - In the 2D case: from a second order tensor (2*2) Matrix  to a corresponding (3*1) Vector
      *    \f$ [ e11, e22, 2*e12 ] \f$ fir 2D case.
      * @param rStrainTensor the given symmetric second order strain tensor
      * @return the corresponding strain tensor in vector form
@@ -1475,9 +1475,9 @@ public:
      * \f$ [ s11, s22, s33, s12, s23, s13 ] \f$ for 3D case and
      * \f$ [ s11, s22, s33, s12 ] \f$ for 2D case.
      * \f$ [ s11, s22, s12 ] \f$ for 2D case.
-     * In the 3D case: from a second order tensor (3*3) Matrix  to a corresponing (6*1) Vector
-     * In the 3D case: from a second order tensor (3*3) Matrix  to a corresponing (4*1) Vector
-     * In the 2D case: from a second order tensor (2*2) Matrix  to a corresponing (3*1) Vector
+     * In the 3D case: from a second order tensor (3*3) Matrix  to a corresponding (6*1) Vector
+     * In the 3D case: from a second order tensor (3*3) Matrix  to a corresponding (4*1) Vector
+     * In the 2D case: from a second order tensor (2*2) Matrix  to a corresponding (3*1) Vector
      * @param rStressTensor the given symmetric second order stress tensor
      * @return the corresponding stress tensor in vector form
      * @tparam TMatrixType The matrix type considered
@@ -1527,9 +1527,9 @@ public:
     /**
      * @brief Transforms a given symmetric Tensor to Voigt Notation:
      * @details The following cases:
-     *  - In the 3D case: from a second order tensor (3*3) Matrix  to a corresponing (6*1) Vector
-     *  - In the 3D case: from a second order tensor (3*3) Matrix  to a corresponing (4*1) Vector
-     *  - In the 2D case: from a second order tensor (2*2) Matrix  to a corresponing (3*1) Vector
+     *  - In the 3D case: from a second order tensor (3*3) Matrix  to a corresponding (6*1) Vector
+     *  - In the 3D case: from a second order tensor (3*3) Matrix  to a corresponding (4*1) Vector
+     *  - In the 2D case: from a second order tensor (2*2) Matrix  to a corresponding (3*1) Vector
      * @param rTensor the given symmetric second order stress tensor
      * @return the corresponding stress tensor in vector form
      * @tparam TMatrixType The matrix type considered
@@ -1706,7 +1706,7 @@ public:
         noalias(rEigenVectorsMatrix) = identity_matrix;
         noalias(rEigenValuesMatrix) = rA;
 
-        // Auxiliar values
+        // Auxiliary values
         TMatrixType2 aux_A, aux_V_matrix, rotation_matrix;
         TDataType a, u, c, s, gamma, teta;
         IndexType index1, index2;

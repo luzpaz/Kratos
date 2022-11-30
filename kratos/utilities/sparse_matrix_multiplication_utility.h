@@ -89,7 +89,7 @@ public:
     /// Default constructor
     SparseMatrixMultiplicationUtility(){};
 
-    /// Desctructor
+    /// Destructor
     virtual ~SparseMatrixMultiplicationUtility()= default;
 
     ///@}
@@ -149,7 +149,7 @@ public:
     {
         typedef typename value_type<CMatrix>::type ValueType;
 
-        // Auxiliar sizes
+        // Auxiliary sizes
         const SizeType nrows = A.size1();
         const SizeType ncols = B.size2();
 
@@ -269,7 +269,7 @@ public:
     {
         typedef typename value_type<CMatrix>::type ValueType;
 
-        // Auxiliar sizes
+        // Auxiliary sizes
         const SizeType nrows = A.size1();
         const SizeType ncols = B.size2();
 
@@ -322,7 +322,7 @@ public:
             tmp_val[i].resize(2 * max_row_width);
         }
 
-        // We create the c_ptr auxiliar variable
+        // We create the c_ptr auxiliary variable
         IndexType* c_ptr = new IndexType[nrows + 1];
         c_ptr[0] = 0;
 
@@ -395,7 +395,7 @@ public:
     {
         typedef typename value_type<AMatrix>::type ValueType;
 
-        // Auxiliar sizes
+        // Auxiliary sizes
         const SizeType nrows = A.size1();
         const SizeType ncols = A.size2();
 
@@ -550,7 +550,7 @@ public:
         IndexVectorType aux_index2_new_a(transpose_nonzero_values);
         DenseVector<ValueType> aux_val_new_a(transpose_nonzero_values);
 
-        // Auxiliar index 1
+        // Auxiliary index 1
         const IndexType aux_1_index = 1;
 
         #pragma omp parallel for
@@ -598,11 +598,11 @@ public:
     }
 
     /**
-     * @brief This method is designed to create the final solution sparse matrix from the auxiliar values
+     * @brief This method is designed to create the final solution sparse matrix from the auxiliary values
      * @param C The matrix solution
      * @param NRows The number of rows of the matrix
      * @param NCols The number of columns of the matrix
-     * @param CPtr The indexes taht indicate the number of nonzero values in each column
+     * @param CPtr The indexes that indicate the number of nonzero values in each column
      * @param AuxIndex2C The indexes of the nonzero columns
      * @param AuxValC The C array containing the values of the sparse matrix
      */
@@ -620,7 +620,7 @@ public:
         if ((NRows == 0) || (NCols == 0))
             return void();
 
-        // Auxiliar values
+        // Auxiliary values
         const TSize nonzero_values = CPtr[NRows];
 
         C = CMatrix(NRows, NCols, nonzero_values);
@@ -646,7 +646,7 @@ public:
      * @brief This method is designed to reorder the rows by columns
      * @param NRows The number of rows of the matrix
      * @param NCols The number of columns of the matrix
-     * @param CPtr The indexes taht indicate the number of nonzero values in each column
+     * @param CPtr The indexes that indicate the number of nonzero values in each column
      * @param Columns The columns of the problem
      * @param Values The values (to be ordered with the rows)
      */
@@ -819,7 +819,7 @@ public:
             }
         }
 
-        // Auxiliar values
+        // Auxiliary values
         std::partial_sum(matrix_ptr, matrix_ptr + nrows + 1, matrix_ptr);
         const SizeType nonzero_values = matrix_ptr[nrows];
 
@@ -886,7 +886,7 @@ public:
 
     /**
      * @brief This is a method to check the block containing nonzero values
-     * @param rMatrix The auxiliar block
+     * @param rMatrix The auxiliary block
      * @param CurrentRow The current row computed
      * @param rNonZeroColsAux2 The nonzero rows array
      */
@@ -908,13 +908,13 @@ public:
     }
 
     /**
-     * @brief This is a method to compute the contribution of the auxiliar blocks
-     * @param AuxK The auxiliar block
+     * @brief This is a method to compute the contribution of the auxiliary blocks
+     * @param AuxK The auxiliary block
      * @param AuxIndex2 The indexes of the non zero columns
      * @param AuxVals The values of the final matrix
      * @param CurrentRow The current row computed
      * @param RowEnd The last column computed
-     * @param InitialIndexColumn The initial column index of the auxiliar block in the final matrix
+     * @param InitialIndexColumn The initial column index of the auxiliary block in the final matrix
      */
     static inline void ComputeAuxiliarValuesBlocks(
         const CompressedMatrix& rMatrix,

@@ -114,7 +114,7 @@ void ModelPartCombinationUtilities::CheckSubModelParts(const std::vector<std::st
     // The list of submodelparts names
     std::unordered_map<std::string, std::size_t> list_of_submodelparts;
 
-    // Interate over the ModelParts
+    // Iterate over the ModelParts
     for (auto& r_name : rModelPartsNames) {
         auto& r_model_part = mrModel.GetModelPart(r_name);
 
@@ -146,7 +146,7 @@ void ModelPartCombinationUtilities::ReorderIds(const std::vector<std::string>& r
     std::vector<std::size_t> number_constraints(number_of_model_parts, 0);
     std::vector<std::size_t> number_properties(number_of_model_parts, 0);
 
-    // Interate over the ModelParts
+    // Iterate over the ModelParts
     for (std::size_t i_mp = 0; i_mp < number_of_model_parts - 1; i_mp++) {
         const auto& r_model_part = mrModel.GetModelPart(rModelPartsNames[i_mp]);
         number_geometries[i_mp + 1] = number_geometries[i_mp] + r_model_part.NumberOfGeometries();

@@ -55,7 +55,7 @@ namespace Kratos
   ///@{
 
   /// Helper utility to transform between point-wise nodal variables and distributed values.
-  /** The functions are desinged so that both sets of values have the same L2 norm over the
+  /** The functions are designed so that both sets of values have the same L2 norm over the
    *  conditions of the provided ModelPart (up to tolerance).
    *  A typical use case is to transform a set of point forces to area-distributed loads
    *  or vice-versa.
@@ -86,7 +86,7 @@ namespace Kratos
       ///@{
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for scalar magnitudes.
@@ -101,7 +101,7 @@ namespace Kratos
         const Variable< double >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for scalar magnitudes.
@@ -117,7 +117,7 @@ namespace Kratos
         const Variable< double >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for scalar magnitudes.
@@ -133,7 +133,7 @@ namespace Kratos
         const Variable< double >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for vector magnitudes.
@@ -148,7 +148,7 @@ namespace Kratos
         const Variable< array_1d<double,3> >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for vector magnitudes.
@@ -164,7 +164,7 @@ namespace Kratos
         const Variable< array_1d<double,3> >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for vector magnitudes.
@@ -180,7 +180,7 @@ namespace Kratos
         const Variable< array_1d<double,3> >& rPointVariable);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for scalar magnitudes.
@@ -199,7 +199,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for scalar magnitudes.
@@ -219,7 +219,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for scalar magnitudes.
@@ -239,7 +239,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for vector magnitudes.
@@ -258,7 +258,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for vector magnitudes.
@@ -278,7 +278,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for vector magnitudes.
@@ -299,7 +299,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for scalar magnitudes.
@@ -315,7 +315,7 @@ namespace Kratos
         const Variable< double >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for scalar magnitudes.
@@ -331,7 +331,7 @@ namespace Kratos
         const Variable< double >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for vector magnitudes.
@@ -347,7 +347,7 @@ namespace Kratos
         const Variable< array_1d<double,3> >& rPointVariable);
 
     /**
-     * @brief Tranform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
+     * @brief Transform a variable distributed over the conditions of rModelPart to a set of concentrated nodal values.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a distributed load into an equivalent set of point loads.
      * Version for vector magnitudes.
@@ -363,7 +363,7 @@ namespace Kratos
         const Variable< array_1d<double,3> >& rPointVariable);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for scalar magnitudes.
@@ -383,7 +383,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for scalar magnitudes.
@@ -403,7 +403,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for vector magnitudes.
@@ -423,7 +423,7 @@ namespace Kratos
         unsigned int MaximumIterations);
 
     /**
-     * @brief Tranform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
+     * @brief Transform a set of concentrated nodal values to a variable distributed over the conditions of rModelPart.
      * The origin and destination values have the same L2 norm over the set of conditions.
      * A typical use case is to transform a set of point loads into an equivalent distributed load.
      * Version for vector magnitudes.
@@ -689,7 +689,7 @@ namespace Kratos
           const Variable< TValueType >& rDistributedVariable);
 
     /**
-     * @brief Auxiliar method to retrieve the variable used in the RHS of the distribution problem
+     * @brief Auxiliary method to retrieve the variable used in the RHS of the distribution problem
      *
      * @tparam TValueType variables value type (double or array_1d<double,3>)
      * @param rVariable reference to the RHS variable of the distribution problem
@@ -699,7 +699,7 @@ namespace Kratos
       static const Variable< TValueType >& GetRHSVariable(const Variable<TValueType>& rVariable);
 
     /**
-     * @brief Auxiliar function to compute the error norm according to the variable value type
+     * @brief Auxiliary function to compute the error norm according to the variable value type
      *
      * @tparam TValueType variables value type (double or array_1d<double,3>)
      * @param NodalValue nodal value
@@ -714,7 +714,7 @@ namespace Kratos
      * Auxiliary method to retrieve the number of entities in the local mesh
      * @tparam TContainerType The container type
      * @param rModelPart Reference to the current model part
-     * @param rEntitiesContainer Reference to the entities container of interest (elemens or conditions)
+     * @param rEntitiesContainer Reference to the entities container of interest (elements or conditions)
      * @return std::size_t Number of entities in the local mesh
      */
     template< class TContainerType >

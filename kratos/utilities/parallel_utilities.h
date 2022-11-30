@@ -52,7 +52,7 @@
 
 #define KRATOS_CHECK_AND_THROW_THREAD_EXCEPTION \
 const std::string& err_msg = err_stream.str(); \
-KRATOS_ERROR_IF_NOT(err_msg.empty()) << "The following errors occured in a parallel region!\n" << err_msg << std::endl;
+KRATOS_ERROR_IF_NOT(err_msg.empty()) << "The following errors occurred in a parallel region!\n" << err_msg << std::endl;
 
 namespace Kratos
 {
@@ -393,7 +393,7 @@ public:
                 });
         }
 
-        //here we impose a syncronization and we check the exceptions
+        //here we impose a synchronization and we check the exceptions
         for(int i=0; i<mNchunks; ++i) {
             try {
                 runners[i].get();

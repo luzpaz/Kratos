@@ -139,7 +139,7 @@ public:
      * @brief Construct a new File Name Information Collector object
      *
      * Construct an object which will handle given filename pattern. This rFileNamePattern
-     * can incldue folders, subfolders. It must include the file name. Followings are
+     * can include folders, subfolders. It must include the file name. The following are
      * the list of flags supported.
      *
      * Accepted flags are:
@@ -156,7 +156,7 @@ public:
      *      1. "test_cases/<model_part_name>/<model_part_full_name>-<time>.h5"
      *      2. "test/test_1_<rank>_<time>.h5"
      *
-     * rFileNamePattern should always have a seperation character/string in between two flags. This seperation
+     * rFileNamePattern should always have a separation character/string in between two flags. This separation
      * character/string can not start with a digit.
      *
      * rFlagFormatMap holds format for each flag. If no format is specified, then
@@ -230,7 +230,7 @@ public:
      * if they are available in the given file name pattern. rFileNameWithoutPath
      * should be only filename without the path.
      *
-     * If the corrensponding rFileNameWithoutPath does not math the pattern given in the
+     * If the corresponding rFileNameWithoutPath does not math the pattern given in the
      * constructor then this returns false; otherwise true.
      *
      * If retrieval is successfully, FileNameData::mFileName will be filled with
@@ -402,8 +402,8 @@ private:
          * @param rValue                        Output integer value
          * @param rCurrentPosition              Starting position of rData string to look for integer
          * @param rData                         String to look for integer
-         * @return true                         If integer retrieval is successfull
-         * @return false                        If integer retrieval is not successfull
+         * @return true                         If integer retrieval is successful
+         * @return false                        If integer retrieval is not successful
          */
         static bool RetrieveIntegerValue(
             int& rValue,
@@ -416,7 +416,7 @@ private:
          * This method tries to retrieve a floating point value from
          * rData starting from rCurrenPosition of rData string.
          *
-         * Followings patterns currently accepted as floating point values:
+         * The following patterns are currently accepted as floating point values:
          *      1. "10"
          *      2. "12.2"
          *      3. "10e-5"
@@ -428,8 +428,8 @@ private:
          * @param rValue                        Output floating value
          * @param rCurrentPosition              Starting position of rData string to look for floating value
          * @param rData                         String to look for floating value
-         * @return true                         If floating value retrieval is successfull
-         * @return false                        If floating value retrieval is not successfull
+         * @return true                         If floating value retrieval is successful
+         * @return false                        If floating value retrieval is not successful
          */
         static bool RetrieveFloatingPointValue(
             double& rValue,

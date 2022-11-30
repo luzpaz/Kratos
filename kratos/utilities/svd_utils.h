@@ -92,7 +92,7 @@ public:
      * @brief This function gives the SVD of a given mxn matrix (m>=n), returns U,S; where A=U*S*V
      * @details U and V are unitary, and S is a diagonal matrix.
      * Where s_i >= 0, and s_i >= s_i+1 (which means that the biggest number is the first one and the smallest the last one)
-     * @todo This version is quite innefficient, look for a real and mathematical implementation (not the algorithm found in Wikipedia!!)
+     * @todo This version is quite inefficient, look for a real and mathematical implementation (not the algorithm found in Wikipedia!!)
      * @param InputMatrix The matrix where perform the SVD
      * @param UMatrix The unitary U matrix
      * @param SMatrix The diagonal S matrix
@@ -127,7 +127,7 @@ public:
      * @brief This function gives the SVD of a given mxn matrix (m>=n), returns U,S; where A=U*S*V
      * @details U and V are unitary, and S is a diagonal matrix.
      * Where s_i >= 0, and s_i >= s_i+1 (which means that the biggest number is the first one and the smallest the last one)
-     * @todo This version is quite innefficient, look for a real and mathematical implementation (not the algorithm found in Wikipedia!!)
+     * @todo This version is quite inefficient, look for a real and mathematical implementation (not the algorithm found in Wikipedia!!)
      * @param InputMatrix The matrix where perform the SVD
      * @param UMatrix The unitary U matrix
      * @param SMatrix The diagonal S matrix
@@ -157,7 +157,7 @@ public:
      * @brief This function gives the Jacobi SVD of a given mxn matrix (m>=n), returns U,S; where A=U*S*V
      * @details U and V are unitary, and S is a diagonal matrix.
      * Where s_i >= 0, and s_i >= s_i+1 (which means that the biggest number is the first one and the smallest the last one)
-     * @todo This version is quite innefficient, look for a real and mathematical implementation (not the algorithm found in Wikipedia!!)
+     * @todo This version is quite inefficient, look for a real and mathematical implementation (not the algorithm found in Wikipedia!!)
      * @param InputMatrix The matrix where perform the SVD
      * @param UMatrix The unitary U matrix
      * @param SMatrix The diagonal S matrix
@@ -330,7 +330,7 @@ public:
         z_matrix(1, 0) = 0.0;
         z_matrix(1, 1) = MathUtils<TDataType>::Sign(SMatrix(1, 1));
 
-        // Auxiliar matrix for alias operations
+        // Auxiliary matrix for alias operations
         MatrixType aux_2_2_matrix(2, 2);
         noalias(aux_2_2_matrix) = prod(UMatrix, z_matrix);
         noalias(UMatrix) = aux_2_2_matrix;

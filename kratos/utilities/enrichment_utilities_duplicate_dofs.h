@@ -50,7 +50,7 @@ namespace Kratos
 * NEGATIVE SIDE
 * N1enriched = 0, N2enriched = 0, N3enriched=N3, N4enriched=N4
 *
-* the combination of the original element shape functions and of thos enrichements can model a discontinuity and a discontinuity of the gradient
+* the combination of the original element shape functions and of those enrichements can model a discontinuity and a discontinuity of the gradient
 * of the function to be enriched.
 *
 * WARNING: difficulties can be expected if the division prescribed passes exactly in one node or if one of the two sides has a volume
@@ -77,7 +77,7 @@ public:
      *        so that it is  N(gauss_index, node_index)
      * @param rPartitionsSign A result vector of 6 holding the sign of the distance for the partition.
      *        The value -1 represents the negative distance sign, 1 represents positive distance and 0 stands for not used partition
-     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape funciton for each volume.
+     * @param rGradientsValue Restult vector of size 6 holding the gradient of the enriched shape function for each volume.
      *        Each element of vector is a 4*3 matrix representing the gradient of enriched shape functions. The use of
      *        matrix is for possible future improvement.
      * @param Nenriched is a Matrix that contains for every gauss point the values of the enriched shape functions at the position of the gauss point
@@ -143,7 +143,7 @@ public:
         array_1d<double, n_nodes> abs_distance = ZeroVector(n_nodes);
         //double sub_volumes_sum = 0.00;
 
-        //compute edge lenghts and max_lenght
+        //compute edge lengths and max_lenght
         double max_lenght = 0.0;
         for (int edge = 0; edge < n_edges; edge++)
         {

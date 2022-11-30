@@ -109,7 +109,7 @@ public:
     /**
      * @brief This function computes the element's volume (with sign)
      * @param rGeometry it is the array of nodes. It expects a tetrahedra
-     * @deprecated This method can be replaced by geometry function without loosing performance
+     * @deprecated This method can be replaced by geometry function without losing performance
      */
     KRATOS_DEPRECATED_MESSAGE("Please use the Volume() method from the geometry")
     static inline double CalculateVolume3D(const GeometryType& rGeometry)
@@ -176,7 +176,7 @@ public:
     /**
      * @brief This function computes the element's volume (with sign)
      * @param rGeometry it is the array of nodes. It expects a triangle
-     * @deprecated This method can be replaced by geometry function without loosing performance
+     * @deprecated This method can be replaced by geometry function without losing performance
      */
     KRATOS_DEPRECATED_MESSAGE("Please use the Area() method from the geometry")
     static inline double CalculateVolume2D(const GeometryType& rGeometry)

@@ -1367,7 +1367,7 @@ double ElementSizeCalculator<3,8>::ProjectedElementSize(
     // In this reference frame, place a vector aligned with rVelocity on the origin and see
     // which side of the box intersects the vector (that is: which component of the vector is larger)
     // Then scale the vector to hit the limit of the box.
-    // The lenght of the vector is what we are looking for.
+    // The length of the vector is what we are looking for.
     // NOTE: we use absolute values on all checks, this allows us to simplify the problem
     // to a single sector (otherwise we would start by determining in which of the eight sectors
     // given by +-x, +-y, +-z we have to look for the intersection).

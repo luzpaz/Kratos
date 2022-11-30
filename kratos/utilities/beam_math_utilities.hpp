@@ -678,7 +678,7 @@ public:
   //*****************************************************************************
 
   /**
-   * Deffault expression for GID local beam axes:: E1 is considered the local beam axial direction
+   * Default expression for GID local beam axes:: E1 is considered the local beam axial direction
    * @param rLocalX Local Beam axis vector (input parameter)
    * @param rRotationMatrix transformation matrix from local to global frame (output parameter)
    */
@@ -714,7 +714,7 @@ public:
   //*****************************************************************************
 
   /**
-   * Deffault expression for GID local beam axes:: E1 is considered the local beam axial direction
+   * Default expression for GID local beam axes:: E1 is considered the local beam axial direction
    * @param rLocalX Local Beam axis director vector E1 (input parameter) (output parameter)
    * @param rLocalY Local Beam axis director vector E2 (output parameter)
    * @param rLocalZ Local Beam axis director vector E3 (output parameter)
@@ -765,7 +765,7 @@ public:
   //*****************************************************************************
 
   /**
-   * Deffault expression for GID local beam axes:: E1 is considered the local beam axial direction
+   * Default expression for GID local beam axes:: E1 is considered the local beam axial direction
    * @param rLocalX Local Beam axis vector (input parameter)
    * @param rLocalY Local axis 2 vector (input parameter)
    * @param rRotationMatrix transformation matrix from local to global frame (output parameter)
@@ -802,7 +802,7 @@ public:
   //*****************************************************************************
 
   /**
-   * Deffault expression for GID local beam axes:: E1 is considered the local beam axial direction
+   * Default expression for GID local beam axes:: E1 is considered the local beam axial direction
    * @param rLocalX Local Beam axis director vector E1 (input parameter) (output parameter)
    * @param rLocalY Local Beam axis director vector E2 (input parameter) (output parameter)
    * @param rLocalZ Local Beam axis director vector E3 (output parameter)
